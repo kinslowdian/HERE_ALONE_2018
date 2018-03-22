@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.gfx-exit-l
+{
+	width: 30px;
+	height: 50px;
+	position: absolute;
+	
+	background: url(../img/exit_l.svg) left top no-repeat;
+}
+
+.gfx-exit-r
+{
+	width: 30px;
+	height: 50px;
+	position: absolute;
+
+	background: url(../img/exit_r.svg) left top no-repeat;	
+}
+
+.gfx-sun
+{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+
+	background: url(../img/sun.svg) left top no-repeat;	
+}
+
+.gfx-tree-broken
+{
+	width: 30px;
+	height: 85px;
+	position: absolute;
+
+	background: url(../img/tree_broken.svg) left top no-repeat;
+}
+
+.gfx-tree
+{
+	width: 30px;
+	height: 3110px;
+	position: absolute;
+
+	background: url(../img/tree.svg) left top no-repeat;
+}
+
+.gfx-trees-far
+{
+	width: 85px;
+	height: 25px;
+	position: absolute;
+	
+	background: url(../img/trees_far.svg) left top no-repeat;
+}
+
+
+

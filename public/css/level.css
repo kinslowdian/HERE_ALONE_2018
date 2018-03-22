@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.level
+{
+	width: 5500px;
+	height: 3000px;
+	position: absolute;
+	overflow: hidden;
+}
+
+.layer
+{
+	width: inherit;
+	height: inherit;
+	position: absolute;
+}
+
+.layer-fixed-crop
+{
+	overflow: hidden; 
+	clip: rect(auto, auto, auto, auto);
+}
+
+.title h1
+{
+	font-size: 1em;
+	text-align: left;
+	line-height: 1;
+
+	position: relative;
+	margin: 1020px 0 0 30px;
+}
+
+.title p
+{
+	font-size: 0.16em;
+	text-align: left;
+	line-height: 1;
+	
+	position: relative;
+	margin: 0 0 0 30px;
+}
+
+.sky
+{
+	width: inherit;
+	height: inherit;
+	position: absolute;
+}
+
+.sky-grey
+{
+	background: #464646;
+}
+
+.ground-woods
+{
+	width: inherit;
+	height: 2000px;
+	position: absolute;
+	left: 0; bottom: 0;
+
+	background: #F5FFF5;
+}
+
+.grad-snow-0
+{
+	width: inherit;
+	height: 2000px;
+	position: absolute;
+	left: 0; top: 0;
+
+	background: linear-gradient(to bottom, rgba(70, 70, 70, 1) 0%, rgba(70, 70, 70, 0) 100%); 
+}

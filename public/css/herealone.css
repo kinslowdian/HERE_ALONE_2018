@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import url(level.css);
+@import url(gfx.css);
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+
+	background: #000;
+
+	font-family: 'Rubik', sans-serif;
+	font-size: 150px;
+	color: #FE4A49;
+}
+
+.text-bold
+{
+	font-weight: 700;
+}
+
+
+
+
+/* !!! RESPONSIVE !!! */
+
+/* MOBILE */
+@media only screen and (min-width: 300px)
+{
+
+}
+
+/* PHABLET */
+@media only screen and (min-width: 600px)
+{
+	
+}
+
+/* TABLET */
+@media only screen and (min-width: 900px)
+{
+
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px)
+{
+
+}
