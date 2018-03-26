@@ -5,6 +5,8 @@
 	width: 30px;
 	height: 50px;
 	position: absolute;
+	right: 0;
+	bottom: 0;
 	
 	background: url(../img/exit_l.svg) left top no-repeat;
 }
@@ -14,6 +16,8 @@
 	width: 30px;
 	height: 50px;
 	position: absolute;
+	left: 0;
+	bottom: 0;
 
 	background: url(../img/exit_r.svg) left top no-repeat;	
 }

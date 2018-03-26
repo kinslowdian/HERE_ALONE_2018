@@ -72,3 +72,11 @@
 
 	background: linear-gradient(to bottom, rgba(70, 70, 70, 1) 0%, rgba(70, 70, 70, 0) 100%); 
 }
+
+.exit-sign-l, .exit-sign-r
+{
+	width: var(--player-w);
+	height: var(--player-h);
+
+	position: absolute;
+}
