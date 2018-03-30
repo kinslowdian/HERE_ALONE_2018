@@ -38,3 +38,10 @@ git status
 git merge branch_name
 git status
 git push origin master
+
+
+///////////////// CLONE
+git clone http://gitlink
+cd gitfolder
+git status
+etc
