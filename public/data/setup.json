@@ -1,3 +1,164 @@
 {
-	
+	"LEVELS":
+	[
+		{
+			"data_id": 0,
+
+			"sections":
+			[
+				{
+					"num_ref": 0, 
+					"x": 55, 
+					"y": 1250, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": 6,
+						"L": "none",
+						"R": 1
+					}
+				},
+
+				{
+					"num_ref": 1, 
+					"x": 605, 
+					"y": 1250, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": 3,
+						"L": 0,
+						"R": 2
+					}
+				},
+
+				{
+					"num_ref": 2, 
+					"x": 1155, 
+					"y": 1250, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": 4,
+						"L": 1,
+						"R": "none"
+					}
+				},
+
+				{
+					"num_ref": 3, 
+					"x": 605, 
+					"y": 1875, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": 1,
+						"D": "none",
+						"L": 6,
+						"R": 4
+					}
+				},
+
+				{
+					"num_ref": 4, 
+					"x": 1155, 
+					"y": 1875, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": 2,
+						"D": 7,
+						"L": 3,
+						"R": 5
+					}
+				},
+
+				{
+					"num_ref": 5, 
+					"x": 1485, 
+					"y": 1875, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": 8,
+						"L": 4,
+						"R": "none"
+					}
+				},
+
+				{
+					"num_ref": 6, 
+					"x": 55, 
+					"y": 2500, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": 3,
+						"D": "none",
+						"L": "none",
+						"R": 7
+					}
+				},
+
+				{
+					"num_ref": 7, 
+					"x": 1155, 
+					"y": 2500, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": 4,
+						"D": "none",
+						"L": 6,
+						"R": 8
+					}
+				},
+
+				{
+					"num_ref": 8, 
+					"x": 1485, 
+					"y": 2500, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": 5,
+						"D": "none",
+						"L": 7,
+						"R": "none"
+					}
+				},
+			]
+		}
+	]
 }
