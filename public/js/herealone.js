@@ -2,6 +2,8 @@
 var trace = function(msg){ console.log(msg); };
 
 var system;
+var levelKit;
+var displayList;
 
 function pageLoad_init()
 {
@@ -27,6 +29,12 @@ function hereAlone_init()
 	system.data = {};
 	system.data.json  = null;
 	system.data.html_levels = null;
+
+	displayList = {};
+
+	levelKit = {};
+	levelKit.unitW = 55;
+	levelKit.unitH = 125;
 
 	// LOAD DATA 0
 	hereAlone_data0_find();
@@ -63,6 +71,27 @@ function hereAlone_data1_read(data)
 
 	// READY TO START
 	hack_levelLoad();
+}
+
+function section_init()
+{
+	levelKit.sectionsARR = new Array();
+
+	displayList.sectionsELM = {};
+
+	for(let i  = 0; i < system.data.json.LEVELS[level].sections.length; i++)
+	{
+		displayList.sectionsELM["section" + i] = {};
+
+		let s = new Section(levelKit.unitW, levelKit.unitH, system.data.json.LEVELS[level].sections[i]);
+
+		levelKit.sectionsARR.push(s);
+	}
+
+	trace(levelKit.sectionsARR);
+
+	// TODO ADD BELOW AFTER TEST
+	// section_add();
 }
 
 
