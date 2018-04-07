@@ -46,7 +46,7 @@ class Section
 
 	placement()
 	{
-		this.htmlAttach.setAttribute("style", "width: " + this.w + "px; height: " + this.h + "px; transform: translate(" + this.x + "px, " + this.y + "px); background: " + this.bg + ";");
+		this.htmlAttach.setAttribute("style", "width: " + this.w + "px; height: " + this.h + "px; left: " + this.x + "px; top: " + this.y + "px; background: " + this.bg + ";");
 	}
 
 	attachItem(obj)
