@@ -9,4 +9,8 @@ function hack_levelLoad()
 	disp.innerHTML = system.data.html_levels[game.level];
 
 	section_init();
+
+	// TODO APPLY THIS WHEN CAM IN PLACE
+	// LAST
+	// resize_init(true);
 }

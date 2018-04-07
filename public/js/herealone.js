@@ -30,6 +30,7 @@ function hereAlone_init()
 	system.data = {};
 	system.data.json  = null;
 	system.data.html_levels = null;
+	system.resizeTimeout;
 
 	displayList = {};
 
@@ -94,7 +95,76 @@ function section_init()
 	trace(levelKit.sectionsARR);
 
 	// TODO ADD BELOW AFTER TEST
+	// TODO BUILD CAMERA INTO HTML ADD SECTIONS LAYER AND ITEMS LAYER
 	// section_add();
+}
+
+function section_add()
+{
+	let htmlSectionBasic = "";
+	let htmlSectionItem = "";
+
+	for(let i in levelKit.sectionsARR)
+	{
+		if(levelKit.sectionsARR[i].isAnItem)
+		{
+			htmlSectionItem += levelKit.sectionsARR[i].htmlBuild;
+		}
+
+		else
+		{
+			htmlSectionBasic += levelKit.sectionsARR[i].htmlBuild;
+		}
+	}
+
+	displayList.layerSections.innerHTML = htmlSectionBasic;
+	displayList.layerItems.innerHTML = htmlSectionItem;
+
+	section_display();
+}
+
+function section_display()
+{
+	for(let i in levelKit.sectionsARR)
+	{
+		displayList["section" + levelKit.sectionsARR[i].num] = document.querySelector("." + levelKit.sectionsARR[i].classBuild);
+		levelKit.sectionsARR[i].list(displayList["section" + levelKit.sectionsARR[i].num]);
+	}
+}
+
+//// GENREAL STAGE
+
+function resize_init(run)
+{
+	if(run)
+	{
+		window.addEventListener("resize", resize_throttler, false);
+	}
+
+	else
+	{
+		window.removeEventListener("resize", resize_throttler, false);
+	}
+}
+
+function resize_throttler()
+{
+	if(!system.resizeTimeout)
+	{
+		system.resizeTimeout = setTimeout(resize_call, 66);
+	}
+}
+
+function resize_call()
+{
+	system.resizeTimeout = null;
+	resize_apply();
+}
+
+function resize_apply()
+{
+	CAM.updateResizeCamera();
+	CAM.viewerFind(sectionsARR[sectionFocus]);
 }
 
 
