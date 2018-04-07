@@ -2,8 +2,9 @@
 var trace = function(msg){ console.log(msg); };
 
 var system;
-var levelKit;
+var CAM;
 var displayList;
+var levelKit;
 var game;
 
 function pageLoad_init()

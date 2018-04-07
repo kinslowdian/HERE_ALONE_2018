@@ -1,4 +1,5 @@
 // DEV ONLY REMOVE CALLS ON FINAL BUILD
+var devDelay;
 
 function hack_levelLoad()
 {
@@ -9,6 +10,13 @@ function hack_levelLoad()
 	// TODO APPLY THIS WHEN CAM IN PLACE
 	// LAST
 	// resize_init(true);
+
+	devDelay = setTimeout(hack_shift, 1 * 1000);
+}
+
+function hack_shift()
+{
+	section_request(0);
 }
 
 function level_new()
@@ -29,4 +37,5 @@ function level_build()
 	displayList.layerItems = document.querySelector(".layer-items");
 
 	section_init();
+	camera_init();
 }
