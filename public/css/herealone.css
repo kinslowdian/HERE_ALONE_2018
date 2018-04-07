@@ -71,9 +71,6 @@ html, body
 
 	overflow: hidden;
 
-	background: #000;
-	background: #fe4a49;
-
 	outline: 1px solid pink;
 }
 
@@ -84,6 +81,14 @@ html, body
 	position: absolute;
 
 	transition: transform 800ms ease-in-out 800ms;
+}
+
+.viewer-bg
+{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	overflow: hidden;
 }
 
 

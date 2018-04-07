@@ -18,6 +18,7 @@ function level_new()
 	// TODO
 	// ADD HTML
 	displayList.viewer.innerHTML = system.data.html_levels[game.level];
+	displayList.viewer_bg.innerHTML = system.data.html_levels_bg[game.level];
 
 	level_build();
 }
