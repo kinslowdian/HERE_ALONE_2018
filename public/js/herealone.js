@@ -137,7 +137,7 @@ function resize_call()
 function resize_apply()
 {
 	CAM.updateResizeCamera();
-	CAM.viewerFind(sectionsARR[sectionFocus]);
+	CAM.viewerFind(levelKit.sectionsARR[levelKit.sectionFocus]);
 }
 
 

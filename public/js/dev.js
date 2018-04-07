@@ -5,11 +5,9 @@ function hack_levelLoad()
 {
 	game.level = 0;
 
-	level_new();	
+	level_new();
 
-	// TODO APPLY THIS WHEN CAM IN PLACE
-	// LAST
-	// resize_init(true);
+	resize_init(true);
 
 	devDelay = setTimeout(hack_shift, 1 * 1000);
 }
@@ -21,10 +19,6 @@ function hack_shift()
 
 function level_new()
 {
-	// let disp = document.querySelector(".ha-display-inner");
-
-	// TODO
-	// ADD HTML
 	displayList.viewer.innerHTML = system.data.html_levels[game.level];
 	displayList.viewer_bg.innerHTML = system.data.html_levels_bg[game.level];
 
