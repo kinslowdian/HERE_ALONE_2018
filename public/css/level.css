@@ -2,8 +2,8 @@
 
 .level
 {
-	width: 5500px;
-	height: 3000px;
+	width: var(--level-w);
+	height: var(--level-h);
 	position: absolute;
 	overflow: hidden;
 }

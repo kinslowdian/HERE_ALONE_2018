@@ -13,11 +13,11 @@ function hack_levelLoad()
 
 function level_new()
 {
-	let disp = document.querySelector(".ha-display-inner");
-	
+	// let disp = document.querySelector(".ha-display-inner");
+
 	// TODO
 	// ADD HTML
-	disp.innerHTML = system.data.html_levels[game.level];
+	displayList.viewer.innerHTML = system.data.html_levels[game.level];
 
 	level_build();
 }

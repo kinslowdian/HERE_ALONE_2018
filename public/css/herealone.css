@@ -6,7 +6,10 @@
 :root
 {
 	--player-w: 55px;
-	--player-h: 125px;	
+	--player-h: 125px;
+
+	--level-w: 5500px;
+	--level-h: 3000px;	
 }
 
 html, body
@@ -19,6 +22,18 @@ html, body
 	font-family: 'Rubik', sans-serif;
 	font-size: 150px;
 	color: #FE4A49;
+}
+
+*
+{
+	user-select: none;
+	-webkit-touch-callout: none;
+	touch-callout: none;
+}
+
+.tween
+{
+	backface-visibility: hidden;
 }
 
 .text-bold
@@ -41,6 +56,34 @@ html, body
 
 	/*overflow: hidden;*/
 	position: relative;
+}
+
+.camera
+{
+	width: 100vw;
+	height: 100vh;
+
+	position: absolute;
+
+	left: 50%; top: 50%;
+
+	transform: translate(-50%, -50%);
+
+	overflow: hidden;
+
+	background: #000;
+	background: #fe4a49;
+
+	outline: 1px solid pink;
+}
+
+.viewer
+{
+	width: var(--level-w);
+	height: var(--level-h);
+	position: absolute;
+
+	transition: transform 800ms ease-in-out 800ms;
 }
 
 

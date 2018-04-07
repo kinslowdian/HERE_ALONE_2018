@@ -33,6 +33,8 @@ function hereAlone_init()
 	system.resizeTimeout;
 
 	displayList = {};
+	displayList.camera = document.querySelector(".camera");
+	displayList.viewer = document.querySelector(".camera .viewer");
 
 	levelKit = {};
 	levelKit.unitW = 55;
@@ -42,6 +44,11 @@ function hereAlone_init()
 
 	// LOAD DATA 0
 	hereAlone_data0_find();
+}
+
+function displayList_register(name, selector)
+{
+	displayList[name] = document.querySelector(selector);
 }
 
 // DATA
