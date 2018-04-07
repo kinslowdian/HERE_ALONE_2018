@@ -4,6 +4,7 @@ var trace = function(msg){ console.log(msg); };
 var system;
 var levelKit;
 var displayList;
+var game;
 
 function pageLoad_init()
 {
@@ -35,6 +36,8 @@ function hereAlone_init()
 	levelKit = {};
 	levelKit.unitW = 55;
 	levelKit.unitH = 125;
+
+	game = {};
 
 	// LOAD DATA 0
 	hereAlone_data0_find();
@@ -79,11 +82,11 @@ function section_init()
 
 	displayList.sectionsELM = {};
 
-	for(let i  = 0; i < system.data.json.LEVELS[level].sections.length; i++)
+	for(let i  = 0; i < system.data.json.LEVELS[game.level].sections.length; i++)
 	{
 		displayList.sectionsELM["section" + i] = {};
 
-		let s = new Section(levelKit.unitW, levelKit.unitH, system.data.json.LEVELS[level].sections[i]);
+		let s = new Section(levelKit.unitW, levelKit.unitH, system.data.json.LEVELS[game.level].sections[i]);
 
 		levelKit.sectionsARR.push(s);
 	}

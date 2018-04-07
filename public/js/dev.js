@@ -4,5 +4,9 @@ function hack_levelLoad()
 {
 	let disp = document.querySelector(".ha-display-inner");
 
-	disp.innerHTML = system.data.html_levels[1];
+	game.level = 0;
+
+	disp.innerHTML = system.data.html_levels[game.level];
+
+	section_init();
 }
