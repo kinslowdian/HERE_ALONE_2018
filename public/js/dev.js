@@ -2,15 +2,30 @@
 
 function hack_levelLoad()
 {
-	let disp = document.querySelector(".ha-display-inner");
-
 	game.level = 0;
 
-	disp.innerHTML = system.data.html_levels[game.level];
-
-	section_init();
+	level_new();	
 
 	// TODO APPLY THIS WHEN CAM IN PLACE
 	// LAST
 	// resize_init(true);
+}
+
+function level_new()
+{
+	let disp = document.querySelector(".ha-display-inner");
+	
+	// TODO
+	// ADD HTML
+	disp.innerHTML = system.data.html_levels[game.level];
+
+	level_build();
+}
+
+function level_build()
+{
+	displayList.layerSections = document.querySelector(".layer-sections");
+	displayList.layerItems = document.querySelector(".layer-items");
+
+	section_init();
 }

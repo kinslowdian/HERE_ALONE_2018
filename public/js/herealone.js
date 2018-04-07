@@ -96,7 +96,7 @@ function section_init()
 
 	// TODO ADD BELOW AFTER TEST
 	// TODO BUILD CAMERA INTO HTML ADD SECTIONS LAYER AND ITEMS LAYER
-	// section_add();
+	section_add();
 }
 
 function section_add()

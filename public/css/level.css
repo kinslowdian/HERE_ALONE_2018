@@ -41,6 +41,11 @@
 	margin: 0 0 0 30px;
 }
 
+.section
+{
+	position: absolute;
+}
+
 .sky
 {
 	width: inherit;
