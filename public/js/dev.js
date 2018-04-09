@@ -14,7 +14,7 @@ function hack_levelLoad()
 
 function hack_shift()
 {
-	section_request(0);
+	section_request(6);
 }
 
 function level_new()
