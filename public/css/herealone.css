@@ -83,7 +83,7 @@ html, body
 	transition: transform 800ms ease-in-out 800ms;
 }
 
-.viewer-bg
+.viewer-bg, .viewer-fg
 {
 	width: 100vw;
 	height: 100vh;

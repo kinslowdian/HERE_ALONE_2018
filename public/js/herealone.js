@@ -80,8 +80,6 @@ function hereAlone_data1_read(data)
 	
 	system.data.html_levels = data_purge[1].split('<div class="data-split"></div>');
 
-	trace(system.data.html_levels);
-
 	// LOAD DATA 2
 	hereAlone_data2_find();
 }
@@ -98,7 +96,23 @@ function hereAlone_data2_read(data)
 	
 	system.data.html_levels_bg = data_purge[1].split('<div class="data-split"></div>');
 
-	trace(system.data.html_levels_bg);
+	// LOAD DATA 3
+	hereAlone_data3_find()
+}
+
+function hereAlone_data3_find()
+{
+	load_ext_data("public/data/levels_fg.html", hereAlone_data3_read, false);	
+}
+
+function hereAlone_data3_read(data)
+{
+	let data_raw = data;
+	let data_purge = data_raw.split('<!-- READ -->');
+	
+	system.data.html_levels_fg = data_purge[1].split('<div class="data-split"></div>');
+
+	trace(system.data.html_levels_fg);
 
 	// READY TO START
 	hack_levelLoad();
