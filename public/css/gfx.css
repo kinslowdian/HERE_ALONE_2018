@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+[class *= "gfx"]
+{
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
 .gfx-exit-l
 {
 	width: 30px;

@@ -21,6 +21,7 @@ function level_new()
 {
 	displayList.viewer.innerHTML = system.data.html_levels[game.level];
 	displayList.viewer_bg.innerHTML = system.data.html_levels_bg[game.level];
+	displayList.viewer_fg.innerHTML = system.data.html_levels_fg[game.level];
 
 	level_build();
 }

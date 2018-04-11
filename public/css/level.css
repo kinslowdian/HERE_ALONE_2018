@@ -8,7 +8,7 @@
 	/*overflow: hidden;*/
 }
 
-.level-bg
+.level-bg, .level-fg
 {
 	width: 100%;
 	height: 100%;
