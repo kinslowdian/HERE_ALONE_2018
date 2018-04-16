@@ -5,6 +5,7 @@ var CAM;
 var levelKit;
 var game;
 var sadly;
+var html_lib;
 
 function pageLoad_init()
 {
@@ -26,6 +27,10 @@ function project_ios_fix_event(event)
 
 function hereAlone_init()
 {
+	let tempLib = document.querySelector(".ha-lib");
+	html_lib = tempLib.innerHTML;
+	tempLib.remove();
+
 	system = {};
 	system.data = {};
 	system.data.json  = null;
