@@ -1,11 +1,10 @@
-// DEBUG
-var trace = function(msg){ console.log(msg); };
+var displayList;
 
 var system;
 var CAM;
-var displayList;
 var levelKit;
 var game;
+var sadly;
 
 function pageLoad_init()
 {

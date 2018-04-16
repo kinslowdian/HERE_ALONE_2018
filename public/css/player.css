@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+.sadly
+{
+	width: var(--player-w);
+	height: var(--player-h);
+	
+	position: absolute;
+}
+
+.sadly-top
+{
+	width: var(--player-w);
+	position: absolute;
+}
+
+.sadly-body
+{
+	width: 55px;
+	height: 62.5px;
+	
+	position: absolute;
+	
+	left: 0; top: 40px;
+}
+
+.sadly-leg
+{
+	width: 20px;
+	height: 20px;
+
+	position: absolute;
+}
+
+.sadly-leg0
+{
+	left: 5px;
+	top: 105px;
+}
+
+.sadly-leg1
+{
+	left: 30px;
+	top: 105px;
+}
+
+.sadly-arm
+{
+	width: 6.25px;
+	height: 20.625px;
+
+	position: absolute;
+
+	left: 5px; top: 28.125px;
+
+	transform-origin: 3.125px 3.125px;
+}
+
+.sadly-head
+{
+	width: 33.754px;
+	height: 52.5px;
+
+	position: absolute;
+
+	left: 0; top: 0;
+
+	transform-origin: 0 40px;
+}
+
+.sadly-eye
+{
+	width: 7.5px;
+	height: 7.5px;
+
+	position: absolute;
+
+	left: 13.75px; top: 31.25px;
+}
+
+.sadly-pupil-wrapper
+{
+	width: 5px;
+	height: 5px;
+
+	position: absolute;
+	left: 1.25px; top: 1.25px;
+}
+
+.sadly-pupil
+{
+	width: 5px;
+	height: 5px;
+
+	position: absolute;
+
+	transition: 200ms ease-in-out;
+}
+
+.sadly-jaw
+{
+	width: 42.5px;
+	
+	position: absolute;
+
+	left: 12.5px; top: 27.5px;
+}
+
+.sadly-jawT
+{
+	width: 42.5px;
+	height: 12.5px;
+	position: absolute;
+	
+	left: 0; top: 0;
+	
+	transform-origin: 0% 100%;
+}
+
+.sadly-jawB
+{
+	width: 42.5px;
+	height: 12.5px;
+	position: absolute;
+	
+	left: 0; top: 12.5px;
+	
+	transform-origin: 0% 0%;
+}
+
+.tween-sadly-head
+{
+	animation:  tweenSadlyHeadFrames ease-in-out infinite;
+}
+
+.tween-sadly-stop
+{
+	animation-iteration-count: 1 !important;
+}
+
+@keyframes tweenSadlyHeadFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(10deg);}
+	100%	{transform: rotate(0deg);}
+}
+
+.tween-sadly-jawT
+{
+	animation: tweenSadlyJawTFrames ease-in-out infinite;
+}
+
+@keyframes tweenSadlyJawTFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(-10deg);}
+	100%	{transform: rotate(0deg);}
+}
+
+.tween-sadly-jawB
+{
+	animation: tweenSadlyJawBFrames ease-in-out infinite;
+}
+
+@keyframes tweenSadlyJawBFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(10deg);}
+	100%	{transform: rotate(0deg);}
+}
+
+/*SETTINGS*/
+
+.setting-head-0
+{
+	animation-duration: 1400ms;
+}
+
+.setting-head-1
+{
+	animation-duration: 1000ms;
+}
+
+.setting-head-2
+{
+	animation-duration: 600ms;
+}
+
+.setting-head-3
+{
+	animation-duration: 200ms;
+}
+
+.setting-jaw-0
+{
+	animation-duration: 400ms;
+}
+
+.setting-jaw-1
+{
+	animation-duration: 300ms;
+}
+
+.setting-jaw-2
+{
+	animation-duration: 200ms;
+}
+
+.setting-jaw-3
+{
+	animation-duration: 100ms;
+}
+
+.setting-eye-F
+{
+	transform: translate(1.5px, 0);
+}
+
+.setting-eye-D
+{
+	transform: translate(0px, 1.5px);
+}
+
+.setting-eye-B
+{
+	transform: translate(-1.5px, 0);
+}
+
+.setting-eye-U
+{
+	transform: translate(0, -1.5px);
+}
+
+.setting-eye-C
+{
+	transform: translate(0, 0);
+}
+
+/*WALK MOVEMENT*/
+
+.tween-walk-body
+{
+	animation: tweenWalkBodyFrames var(--playerWalkSpeed) ease-in-out infinite;
+}
+
+.tween-walk-leg-0
+{
+	animation: tweenWalkLeg0Frames var(--playerWalkSpeed) ease-in-out infinite;
+}
+
+.tween-walk-leg-1
+{
+	animation: tweenWalkLeg1Frames var(--playerWalkSpeed) ease-in-out infinite;
+}
+
+.tween-walk-arm
+{
+	animation: tweenWalkArmFrames calc(var(--playerWalkSpeed) * 2) ease-in-out infinite;	
+}
+
+@keyframes tweenWalkBodyFrames
+{
+	0%		{transform: translateY(0);}
+	50%		{transform: translateY(10px);}
+	100%	{transform: translateY(0);}
+}
+
+@keyframes tweenWalkLeg0Frames
+{
+	0%		{transform: translateX(0);}
+	100%	{transform: translateX(25px);}
+}
+
+@keyframes tweenWalkLeg1Frames
+{
+	0%		{transform: translateX(0);}
+	100%	{transform: translateX(-25px);}
+}
+
+@keyframes tweenWalkArmFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(-60deg);}
+	100%	{transform: rotate(0deg);}
+}

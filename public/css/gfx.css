@@ -5,6 +5,10 @@
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
 	image-rendering: crisp-edges;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
 }
 
 .gfx-exit-l
@@ -63,6 +67,51 @@
 	position: absolute;
 	
 	background: url(../img/trees_far.svg) left top no-repeat;
+}
+
+.gfx-jawT
+{
+	background-image: url(../img/sadly_JAW_T.svg);	
+}
+
+.gfx-jawB
+{
+	background-image: url(../img/sadly_JAW_B.svg);	
+}
+
+.gfx-head
+{
+	background-image: url(../img/sadly_HEAD.svg);	
+}
+
+.gfx-eye
+{
+	background-image: url(../img/sadly_HEAD_EYE.svg);	
+}
+
+.gfx-eye-pupil
+{
+	background-image: url(../img/sadly_EYE.svg);
+}
+
+.gfx-body
+{
+	background-image: url(../img/sadly_BODY.svg);	
+}
+
+.gfx-leg
+{
+	background-image: url(../img/sadly_LEG_0.svg);	
+}
+
+.gfx-arm
+{
+	background-image: url(../img/sadly_ARM.svg);
+}
+
+.gfx-dev
+{
+	background-image: url(../img/frameTest_guide.svg);
 }
 
 

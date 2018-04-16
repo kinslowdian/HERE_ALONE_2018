@@ -1,4 +1,8 @@
 // DEV ONLY REMOVE CALLS ON FINAL BUILD
+
+// DEBUG
+var trace = function(msg){ console.log(msg); };
+
 var devDelay;
 
 function hack_levelLoad()
