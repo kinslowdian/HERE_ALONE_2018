@@ -27,9 +27,7 @@ function project_ios_fix_event(event)
 
 function hereAlone_init()
 {
-	let tempLib = document.querySelector(".ha-lib");
-	html_lib = tempLib.innerHTML;
-	tempLib.remove();
+	html_lib_read();
 
 	system = {};
 	system.data = {};
@@ -121,6 +119,19 @@ function hereAlone_data3_read(data)
 
 	// READY TO START
 	hack_levelLoad();
+}
+
+function html_lib_read()
+{
+	let lib_source = document.querySelector(".ha-lib");
+
+	html_lib = {};
+	html_lib.lib_sadly = document.querySelector(".ha-lib-sadly").innerHTML;
+
+	trace(html_lib);
+
+	// ON END
+	lib_source.remove();
 }
 
 

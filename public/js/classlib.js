@@ -185,10 +185,6 @@ class Sadly
 
 	applyAction_head(num)
 	{
-		trace("num == " + num);
-		trace(this);
-		trace(this.body_head);
-
 		if(this.body_head_static)
 		{
 			this.body_head.classList.remove(this.body_head_static);
