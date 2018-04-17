@@ -148,6 +148,98 @@ class Section
 	}
 }
 
+class Player
+{
+	constructor(htmlAttach, htmlAttachInner, htmlAttachBase, w, h, x, y)
+	{
+		this.htmlAttach = htmlAttach;
+		this.htmlAttachInner = htmlAttachInner;
+		this.htmlAttachBase = htmlAttachBase;
+		// this.htmlAttachLegL = htmlAttachLegL;
+		// this.htmlAttachLegR = htmlAttachLegR;
+		this.w = w;
+		this.h = h;
+		this.x = x;
+		this.y = y;
+
+		this.playerWalk(false);
+	}
+
+	playerAddThought(htmlAttachThought)
+	{
+		this.thinking = false;
+		this.htmlAttachThought = htmlAttachThought;
+	}
+	
+	playerMoveTo(target)
+	{
+		let x = target.x + (target.w * 0.5);
+		let y = target.y + (target.h * 0.5);
+		
+		this.htmlAttach.setAttribute("style", "transform: translate(calc(" + x + "px - " + (this.w * 0.5) + "px), calc(" + y + "px - " + (this.h * 0.5) + "px));");
+
+		if(this.thinking)
+		{
+			this.playerThink(false);
+		}
+	}
+
+	playerDirection(dir)
+	{
+		if(dir == "F")
+		{
+			this.htmlAttachInner.classList.remove("player-back");
+
+			// TODO
+			// this.htmlAttachThought.classList.remove("player-back");
+		}
+
+		else if(dir == "B")
+		{
+			this.htmlAttachInner.classList.add("player-back");
+
+			// TODO
+			// this.htmlAttachThought.classList.add("player-back");
+		}
+	}
+
+	playerWalk(allow)
+	{
+		if(allow)
+		{
+			// TODO
+			// this.htmlAttachBase.classList.add("player-walk");
+			// this.htmlAttachLegL.classList.add("player-walk-legL");
+			// this.htmlAttachLegR.classList.add("player-walk-legR");
+		}
+
+		else
+		{
+			// TODO
+			// this.htmlAttachBase.classList.remove("player-walk");
+			// this.htmlAttachLegL.classList.remove("player-walk-legL");
+			// this.htmlAttachLegR.classList.remove("player-walk-legR");
+		}
+	}
+
+	playerThink(allow)
+	{
+		if(allow)
+		{
+			// TODO
+			// this.thinking = true;
+			// this.htmlAttachThought.classList.add("thought-thinking");
+		}
+
+		else
+		{
+			// TODO
+			// this.thinking = false;
+			// this.htmlAttachThought.classList.remove("thought-thinking");
+		}
+	}
+}
+
 class Sadly
 {
 	constructor(div)
@@ -272,96 +364,3 @@ class Sadly
 	}
 
 }
-
-class Player
-{
-	constructor(htmlAttach, htmlAttachInner, htmlAttachBase, w, h, x, y)
-	{
-		this.htmlAttach = htmlAttach;
-		this.htmlAttachInner = htmlAttachInner;
-		this.htmlAttachBase = htmlAttachBase;
-		// this.htmlAttachLegL = htmlAttachLegL;
-		// this.htmlAttachLegR = htmlAttachLegR;
-		this.w = w;
-		this.h = h;
-		this.x = x;
-		this.y = y;
-
-		this.playerWalk(false);
-	}
-
-	playerAddThought(htmlAttachThought)
-	{
-		this.thinking = false;
-		this.htmlAttachThought = htmlAttachThought;
-	}
-	
-	playerMoveTo(target)
-	{
-		let x = target.x + (target.w * 0.5);
-		let y = target.y + (target.h * 0.5);
-		
-		this.htmlAttach.setAttribute("style", "transform: translate(calc(" + x + "px - " + (this.w * 0.5) + "px), calc(" + y + "px - " + (this.h * 0.5) + "px));");
-
-		if(this.thinking)
-		{
-			this.playerThink(false);
-		}
-	}
-
-	playerDirection(dir)
-	{
-		if(dir == "F")
-		{
-			this.htmlAttachInner.classList.remove("player-back");
-
-			// TODO
-			// this.htmlAttachThought.classList.remove("player-back");
-		}
-
-		else if(dir == "B")
-		{
-			this.htmlAttachInner.classList.add("player-back");
-
-			// TODO
-			// this.htmlAttachThought.classList.add("player-back");
-		}
-	}
-
-	playerWalk(allow)
-	{
-		if(allow)
-		{
-			// TODO
-			// this.htmlAttachBase.classList.add("player-walk");
-			// this.htmlAttachLegL.classList.add("player-walk-legL");
-			// this.htmlAttachLegR.classList.add("player-walk-legR");
-		}
-
-		else
-		{
-			// TODO
-			// this.htmlAttachBase.classList.remove("player-walk");
-			// this.htmlAttachLegL.classList.remove("player-walk-legL");
-			// this.htmlAttachLegR.classList.remove("player-walk-legR");
-		}
-	}
-
-	playerThink(allow)
-	{
-		if(allow)
-		{
-			// TODO
-			// this.thinking = true;
-			// this.htmlAttachThought.classList.add("thought-thinking");
-		}
-
-		else
-		{
-			// TODO
-			// this.thinking = false;
-			// this.htmlAttachThought.classList.remove("thought-thinking");
-		}
-	}
-}
-
