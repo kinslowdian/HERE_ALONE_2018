@@ -37,4 +37,5 @@ function level_build()
 
 	section_init();
 	camera_init();
+	player_init();
 }

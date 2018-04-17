@@ -1,5 +1,39 @@
 @charset "UTF-8";
 
+/*PLAYER*/
+
+.player
+{
+	width: var(--player-w);
+	height: var(--player-h);
+	position: absolute;
+
+	transition: transform var(--playerMoveSpeed) ease-in-out;
+}
+
+.player-inner, .player-base
+{
+	width: inherit;
+	height: inherit;
+	position: absolute;
+
+	left: 0; top: 0;
+
+	transform-origin: 50% 0%;
+}
+
+.player-forw
+{
+	transform: scaleX(1);
+}
+
+.player-back
+{
+	transform: scaleX(-1);
+}
+
+/*CHARACTER*/
+
 .sadly
 {
 	width: var(--player-w);

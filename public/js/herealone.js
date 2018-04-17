@@ -126,6 +126,7 @@ function html_lib_read()
 	let lib_source = document.querySelector(".ha-lib");
 
 	html_lib = {};
+	// LIST
 	html_lib.lib_sadly = document.querySelector(".ha-lib-sadly").innerHTML;
 	html_lib.lip_player_wrapper = document.querySelector(".ha-lib-player-wrapper").innerHTML;
 

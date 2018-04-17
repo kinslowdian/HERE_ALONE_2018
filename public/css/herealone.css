@@ -9,6 +9,7 @@
 	--player-w: 55px;
 	--player-h: 125px;
 	--playerWalkSpeed: 200ms;
+	--playerMoveSpeed: 1600ms;
 
 	--level-w: 5500px;
 	--level-h: 3000px;
