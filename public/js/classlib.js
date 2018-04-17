@@ -254,11 +254,16 @@ class Sadly
 
 	linkBody()
 	{
-		this.body_head = this.htmlAttach.querySelector(".sadly-head");
-		this.body_jawT = this.htmlAttach.querySelector(".sadly-jawT");
-		this.body_jawB = this.htmlAttach.querySelector(".sadly-jawB");
-		this.body_eye = this.htmlAttach.querySelector(".sadly-pupil");
-	
+		this.body_head 	= this.htmlAttach.querySelector(".sadly-head");
+		this.body_jawT 	= this.htmlAttach.querySelector(".sadly-jawT");
+		this.body_jawB 	= this.htmlAttach.querySelector(".sadly-jawB");
+		this.body_eye 	= this.htmlAttach.querySelector(".sadly-pupil");
+		
+		this.body_body 	= this.htmlAttach.querySelector(".sadly-body");
+		this.body_arm 	= this.htmlAttach.querySelector(".sadly-arm");
+		this.body_leg0 	= this.htmlAttach.querySelector(".sadly-leg0");
+		this.body_leg1 	= this.htmlAttach.querySelector(".sadly-leg1");
+
 		this.body_head_css = false;
 		this.body_jaw_css = false;
 		this.body_eye_css = false;
