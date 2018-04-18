@@ -11,6 +11,11 @@
 	background-size: 100%;
 }
 
+.gfx-arrow
+{
+	background-image: url(../img/ui_arrow.svg);
+}
+
 .gfx-exit-l
 {
 	width: 30px;

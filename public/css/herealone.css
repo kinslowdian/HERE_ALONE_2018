@@ -13,6 +13,11 @@
 
 	--level-w: 5500px;
 	--level-h: 3000px;
+
+	--ui-offset: 160px;
+	--ui-offset: 80px;
+
+	--dayglo: #FE4A49;
 }
 
 html, body
@@ -24,7 +29,7 @@ html, body
 
 	font-family: 'Rubik', sans-serif;
 	font-size: 150px;
-	color: #FE4A49;
+	color: var(--dayglo);
 }
 
 *
@@ -37,6 +42,12 @@ html, body
 .tween
 {
 	backface-visibility: hidden;
+}
+
+.center-translate
+{
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .text-bold
@@ -68,10 +79,6 @@ html, body
 
 	position: absolute;
 
-	left: 50%; top: 50%;
-
-	transform: translate(-50%, -50%);
-
 	overflow: hidden;
 
 	outline: 1px solid pink;
@@ -102,6 +109,81 @@ html, body
 	position: absolute;
 }
 
+.ui-hint
+{
+	width: inherit;
+	height: inherit;
+
+	position: absolute;
+
+	left: 0; top: 0;
+}
+
+.ui-hint ul
+{
+	/* 	OFF SET BORDER TO WIDTH AND HEIGHT */
+	width: calc(100% - var(--ui-offset));
+	height: calc(100% - var(--ui-offset));
+
+	position: absolute;
+}
+
+.ui-arrow
+{
+	width: 40px;
+	height: 40px;
+
+	position: absolute;
+	pointer-events: none;
+
+	transform-origin: 50% 50%;
+}
+
+.ui-arrow > div
+{
+	width: inherit;
+	height: inherit;
+
+	position: absolute;
+	pointer-events: inherit;
+}
+
+.ui-hint .ui-u
+{
+	left: 50%; top:0;
+	transform: translate(-50%, 0) rotate(270deg);
+}
+
+.ui-hint .ui-d
+{
+	left: 50%; bottom: 0;
+	transform: translate(-50%, 0) rotate(90deg);
+}
+
+.ui-hint .ui-l
+{
+	left: 0; top: 50%;
+	transform: translate(0, -50%) rotate(180deg);
+}
+
+.ui-hint .ui-r
+{
+	right: 0; top: 50%;
+	transform: translate(0, -50%) rotate(0deg);
+}
+
+.tween-ui-hint
+{
+	animation: uiArrowFrames 800ms steps(4) infinite;
+}
+
+@keyframes uiArrowFrames
+{
+	0%		{transform: translateX(0);}
+	40%		{transform: translateX(-100%);}
+	80%  	{transform: translateX(0);}
+	100%	{transform: translateX(0);}
+}
 
 
 /* !!! RESPONSIVE !!! */
