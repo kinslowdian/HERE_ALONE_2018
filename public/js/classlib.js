@@ -259,7 +259,7 @@ class Sadly
 		this.body_jawB 	= this.htmlAttach.querySelector(".sadly-jawB");
 		this.body_eye 	= this.htmlAttach.querySelector(".sadly-pupil");
 		
-		this.body_body 	= this.htmlAttach.querySelector(".sadly-body");
+		this.body_top 	= this.htmlAttach.querySelector(".sadly-top");
 		this.body_arm 	= this.htmlAttach.querySelector(".sadly-arm");
 		this.body_leg0 	= this.htmlAttach.querySelector(".sadly-leg0");
 		this.body_leg1 	= this.htmlAttach.querySelector(".sadly-leg1");
@@ -338,6 +338,25 @@ class Sadly
 		this.body_jawB.classList.add(css);
 
 		this.body_jaw_static = css;
+	}
+
+	walk(allow)
+	{
+		if(allow)
+		{
+			this.body_top.classList.add("tween-walk-body");
+			this.body_arm.classList.add("tween-walk-arm");
+			this.body_leg0.classList.add("tween-walk-leg-0");
+			this.body_leg1.classList.add("tween-walk-leg-1");		
+		}
+
+		else
+		{
+			this.body_top.classList.remove("tween-walk-body");
+			this.body_arm.classList.remove("tween-walk-arm");
+			this.body_leg0.classList.remove("tween-walk-leg-0");
+			this.body_leg1.classList.remove("tween-walk-leg-1");	
+		}
 	}
 
 	listAction(props)
