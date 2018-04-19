@@ -15,9 +15,10 @@
 	--level-h: 3000px;
 
 	--ui-offset: 160px;
-	--ui-offset: 80px;
 
 	--dayglo: #FE4A49;
+	--offWhite: #F5FFF5;
+	--constBlack: #082225;
 }
 
 html, body
@@ -109,6 +110,102 @@ html, body
 	position: absolute;
 }
 
+.ui
+{
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	
+	left: 0; top: 0;
+}
+
+.ui ul
+{
+	/* 	OFF SET BORDER TO WIDTH AND HEIGHT */
+	width: calc(100% - 60px);
+	height: calc(100% - 60px);
+	
+	position: absolute;
+	left: 50%; top: 50%;
+	
+	transform: translate(-50%, -50%);
+}
+
+.ui-u
+{
+	left: 50%; top:0;
+	transform: translate(-50%, 0);
+}
+
+.ui-d
+{
+	left: 50%; bottom: 0;
+	transform: translate(-50%, 0);
+}
+
+.ui-l
+{
+	left: 0; top: 50%;
+	transform: translate(0, -50%);
+}
+
+.ui-r
+{
+	right: 0; top: 50%;
+	transform: translate(0, -50%);
+}
+
+.ui-default
+{
+/*	opacity: 0;
+	cursor: default !important;*/
+}
+
+.ui li
+{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	
+	position: absolute;
+	
+	background: var(--dayglo);
+	
+	user-select: none;
+	-webkit-touch-callout: none;
+	touch-callout: none;
+	
+	cursor: pointer;
+
+	transition: 200ms ease-in-out;
+
+	transform-origin: 50% 50%;
+}
+
+.ui li:hover
+{
+	background: var(--constBlack);
+}
+
+.ui-touch
+{
+	background: var(--constBlack);
+}
+
+.ui li div
+{
+	width: 30%;
+	height: 30%;
+	border-radius: 50%;
+	
+	position: absolute;
+	
+	background: var(--offWhite);
+	
+	pointer-events: none;
+}
+
 .ui-hint
 {
 	width: inherit;
@@ -174,13 +271,13 @@ html, body
 
 .tween-ui-hint
 {
-	animation: uiArrowFrames 800ms steps(4) infinite;
+	animation: uiArrowFrames 400ms steps(4) infinite;
 }
 
 @keyframes uiArrowFrames
 {
 	0%		{transform: translateX(0);}
-	40%		{transform: translateX(-100%);}
+	40%		{transform: translateX(-50%);}
 	80%  	{transform: translateX(0);}
 	100%	{transform: translateX(0);}
 }

@@ -6,6 +6,8 @@ var levelKit;
 var game;
 var sadly;
 var html_lib;
+var control;
+var ui;
 
 function pageLoad_init()
 {
