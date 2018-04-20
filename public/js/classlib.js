@@ -165,6 +165,11 @@ class Player
 		this.playerWalk(false);
 	}
 
+	attachWalkTween()
+	{
+		this.htmlAttach.classList.add("tween-player");
+	}
+
 	playerAddThought(htmlAttachThought)
 	{
 		this.thinking = false;

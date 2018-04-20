@@ -41,4 +41,6 @@ function level_build()
 	ui_init();
 	player_init();
 	control_init();
+
+	game.player.main.attachWalkTween();
 }

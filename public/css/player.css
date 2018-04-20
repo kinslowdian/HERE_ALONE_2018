@@ -8,6 +8,11 @@
 	height: var(--player-h);
 	position: absolute;
 
+	/*transition: transform var(--playerMoveSpeed) ease-in-out;*/
+}
+
+.tween-player
+{
 	transition: transform var(--playerMoveSpeed) ease-in-out;
 }
 
