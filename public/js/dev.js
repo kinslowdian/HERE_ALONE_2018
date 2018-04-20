@@ -36,6 +36,9 @@ function level_build()
 	displayList.layerItems = document.querySelector(".layer-items");
 
 	section_init();
+	item_init();
 	camera_init();
+	ui_init();
 	player_init();
+	control_init();
 }

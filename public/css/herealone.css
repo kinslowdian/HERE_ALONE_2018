@@ -158,8 +158,8 @@ html, body
 
 .ui-default
 {
-/*	opacity: 0;
-	cursor: default !important;*/
+	opacity: 0;
+	cursor: default !important;
 }
 
 .ui li

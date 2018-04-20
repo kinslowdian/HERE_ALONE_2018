@@ -131,7 +131,7 @@ function ui_init()
 
 function ui_required()
 {
-	let sectionTarget = sectionsARR[sectionFocus];
+	let sectionTarget = levelKit.sectionsARR[levelKit.sectionFocus];
 
 	if(sectionTarget.respond.U !== "none")
 	{
@@ -210,7 +210,7 @@ function ui_path(direction, keyInput)
 {
 	let activated = false;
 
-	let sectionTarget = sectionsARR[sectionFocus];
+	let sectionTarget = levelKit.sectionsARR[levelKit.sectionFocus];
 
 	switch(direction)
 	{
@@ -218,9 +218,9 @@ function ui_path(direction, keyInput)
 		{
 			if(sectionTarget.respond.U !== "none")
 			{
-				if(sectionsARR[sectionTarget.respond.U] != undefined && sectionsARR[sectionTarget.respond.U].ignore)
+				if(levelKit.sectionsARR[sectionTarget.respond.U] != undefined && levelKit.sectionsARR[sectionTarget.respond.U].ignore)
 				{
-					section_request(sectionsARR[sectionTarget.respond.U].respond.U);
+					section_request(levelKit.sectionsARR[sectionTarget.respond.U].respond.U);
 				}
 
 				else
@@ -248,9 +248,9 @@ function ui_path(direction, keyInput)
 					}
 				}
 
-				else if(sectionsARR[sectionTarget.respond.D] != undefined && sectionsARR[sectionTarget.respond.D].ignore)
+				else if(levelKit.sectionsARR[sectionTarget.respond.D] != undefined && levelKit.sectionsARR[sectionTarget.respond.D].ignore)
 				{
-					section_request(sectionsARR[sectionTarget.respond.D].respond.D);
+					section_request(levelKit.sectionsARR[sectionTarget.respond.D].respond.D);
 				}
 
 				else
@@ -266,11 +266,11 @@ function ui_path(direction, keyInput)
 
 		case "L":
 		{
-			if(sectionsARR[sectionTarget.respond.L] != undefined && sectionTarget.respond.L !== "none")
+			if(levelKit.sectionsARR[sectionTarget.respond.L] != undefined && sectionTarget.respond.L !== "none")
 			{
-				if(sectionsARR[sectionTarget.respond.L].ignore)
+				if(levelKit.sectionsARR[sectionTarget.respond.L].ignore)
 				{
-					section_request(sectionsARR[sectionTarget.respond.L].respond.L);
+					section_request(levelKit.sectionsARR[sectionTarget.respond.L].respond.L);
 				}
 
 				else
@@ -290,9 +290,9 @@ function ui_path(direction, keyInput)
 		{
 			if(sectionTarget.respond.R !== "none")
 			{
-				if(sectionsARR[sectionTarget.respond.R] != undefined && sectionsARR[sectionTarget.respond.R].ignore)
+				if(levelKit.sectionsARR[sectionTarget.respond.R] != undefined && levelKit.sectionsARR[sectionTarget.respond.R].ignore)
 				{
-					section_request(sectionsARR[sectionTarget.respond.R].respond.R);
+					section_request(levelKit.sectionsARR[sectionTarget.respond.R].respond.R);
 				}
 
 				else
@@ -321,7 +321,7 @@ function ui_path(direction, keyInput)
 
 	if(activated)
 	{
-		if(!itemEvent)
+		if(!levelKit.itemEvent)
 		{
 			game.player.main.playerWalk(true);
 		}

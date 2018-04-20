@@ -64,6 +64,13 @@ function section_request(num)
 	}
 }
 
+// TODO
+function item_init()
+{
+	levelKit.itemsARR = new Array();
+	levelKit.itemEvent = false;
+}
+
 function camera_init()
 {
 	CAM = new Camera(displayList.camera);
@@ -82,21 +89,21 @@ function camera_newFocus()
 
 	CAM.viewerUpdateValues();
 
-	// TODO WHEN READY
-	// player.playerWalk(false);
+	game.player.main.playerWalk(false);
 
+	// TODO WHEN READY
 	// if(sectionOBJ.isAnItem && !itemsARR[sectionOBJ.item_ref].itemFound)
 	// {
-	// 	player.playerThink(true);
+	// 	game.player.main.playerThink(true);
 	// }
 
-	// if(itemEvent)
-	// {
-	// 	// DO NOTHING
-	// }
+	if(levelKit.itemEvent)
+	{
+		// DO NOTHING
+	}
 
-	// else
-	// {
-	// 	ui_required();
-	// }
+	else
+	{
+		ui_required();
+	}
 }
