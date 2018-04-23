@@ -24,6 +24,11 @@ class Camera
 		this.viewer.x = 0;
 		this.viewer.y = 0;
 	}
+
+	attachMainTween()
+	{
+		this.viewer.classList.add("tween-viewer");
+	}
 	
 	connectViewerOther(div)
 	{
@@ -165,7 +170,7 @@ class Player
 		this.playerWalk(false);
 	}
 
-	attachWalkTween()
+	attachMainTween()
 	{
 		this.htmlAttach.classList.add("tween-player");
 	}

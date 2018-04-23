@@ -11,10 +11,14 @@
 	--playerWalkSpeed: 200ms;
 	--playerMoveSpeed: 1600ms;
 
+	--camSpeed: 800ms;
+	--camDelay: 800ms;
+
 	--level-w: 5500px;
 	--level-h: 3000px;
 
-	--ui-offset: 160px;
+	--ui-frame-offset: 20px;
+	--ui-offset: 120px;
 
 	--dayglo: #FE4A49;
 	--offWhite: #F5FFF5;
@@ -90,8 +94,11 @@ html, body
 	width: var(--level-w);
 	height: var(--level-h);
 	position: absolute;
+}
 
-	transition: transform 800ms ease-in-out 800ms;
+.tween-viewer
+{
+	transition: transform var(--camSpeed) ease-in-out var(--camDelay);
 }
 
 .viewer-bg, .viewer-fg
@@ -123,8 +130,8 @@ html, body
 .ui ul
 {
 	/* 	OFF SET BORDER TO WIDTH AND HEIGHT */
-	width: calc(100% - 60px);
-	height: calc(100% - 60px);
+	width: calc(100% - var(--ui-frame-offset));
+	height: calc(100% - var(--ui-frame-offset));
 	
 	position: absolute;
 	left: 50%; top: 50%;
@@ -227,8 +234,8 @@ html, body
 
 .ui-arrow
 {
-	width: 40px;
-	height: 40px;
+	width: 20px;
+	height: 20px;
 
 	position: absolute;
 	pointer-events: none;

@@ -4,6 +4,7 @@
 var trace = function(msg){ console.log(msg); };
 
 var devDelay;
+var exitFrame; //CODE DELAY
 
 function hack_levelLoad()
 {
@@ -13,7 +14,7 @@ function hack_levelLoad()
 
 	resize_init(true);
 
-	devDelay = setTimeout(hack_shift, 1 * 1000);
+	// devDelay = setTimeout(hack_shift, 1 * 1000);
 }
 
 function hack_shift()
@@ -42,5 +43,28 @@ function level_build()
 	player_init();
 	control_init();
 
-	game.player.main.attachWalkTween();
+	section_request(0);
+
+	exitFrame = setTimeout(level_transitionsAdd, 60);
+}
+
+function level_transitionsAdd()
+{
+	game.player.main.attachMainTween();
+	CAM.attachMainTween();
+
+	level_controlAdd();
+}
+
+function level_controlAdd()
+{
+	camera_newFocus();
+	control_on(true);
+
+	level_start();
+}
+
+function level_start()
+{
+	// FADE ETC... START
 }
