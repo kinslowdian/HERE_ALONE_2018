@@ -177,7 +177,7 @@ html, body
 	
 	position: absolute;
 	
-	background: var(--dayglo);
+	background: var(--constBlack);
 	
 	user-select: none;
 	-webkit-touch-callout: none;
@@ -192,12 +192,12 @@ html, body
 
 .ui li:hover
 {
-	background: var(--constBlack);
+	background: var(--dayglo);
 }
 
 .ui-touch
 {
-	background: var(--constBlack);
+	background: var(--dayglo);
 }
 
 .ui li div
@@ -278,7 +278,7 @@ html, body
 
 .tween-ui-hint
 {
-	animation: uiArrowFrames 400ms steps(4) infinite;
+	animation: uiArrowFrames 400ms steps(4) 10;
 }
 
 @keyframes uiArrowFrames
