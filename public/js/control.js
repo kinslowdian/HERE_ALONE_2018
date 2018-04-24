@@ -389,8 +389,12 @@ function ui_event(event)
 
 function hint_activate(obj)
 {
+	let arrow = obj.htmlAttach.querySelector(".gfx-arrow");
+
 	obj.show = true;
 	obj.htmlAttach.classList.remove("ui-default");
+
+	arrow.classList.add("tween-ui-hint");
 }
 
 function hint_reset()
@@ -399,8 +403,12 @@ function hint_reset()
 	{
 		if(ui.hintList[i].show)
 		{
+			let arrow = ui.hintList[i].htmlAttach.querySelector(".gfx-arrow");
+
 			ui.hintList[i].show = false;
-			ui.hintList[i].htmlAttach.classList.add("ui-default");	
+			ui.hintList[i].htmlAttach.classList.add("ui-default");
+
+			arrow.classList.remove("tween-ui-hint");
 		}
 	}
 }
