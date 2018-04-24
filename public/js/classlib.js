@@ -167,12 +167,23 @@ class Player
 		this.x = x;
 		this.y = y;
 
-		this.playerWalk(false);
+		this.sadlyAttached = false;
+
+		// this.playerWalk(false);
 	}
 
 	attachMainTween()
 	{
 		this.htmlAttach.classList.add("tween-player");
+	}
+
+	attachCharacter(obj)
+	{
+		this.sadly = obj;
+
+		this.sadlyAttached = true;
+
+		trace(obj);
 	}
 
 	playerAddThought(htmlAttachThought)
@@ -215,20 +226,9 @@ class Player
 
 	playerWalk(allow)
 	{
-		if(allow)
+		if(this.sadlyAttached)
 		{
-			// TODO
-			// this.htmlAttachBase.classList.add("player-walk");
-			// this.htmlAttachLegL.classList.add("player-walk-legL");
-			// this.htmlAttachLegR.classList.add("player-walk-legR");
-		}
-
-		else
-		{
-			// TODO
-			// this.htmlAttachBase.classList.remove("player-walk");
-			// this.htmlAttachLegL.classList.remove("player-walk-legL");
-			// this.htmlAttachLegR.classList.remove("player-walk-legR");
+			this.sadly.walk(allow);
 		}
 	}
 

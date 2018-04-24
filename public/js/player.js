@@ -48,5 +48,9 @@ function player_object_init()
 	// game.player.main.playerAddThought(displayList.playerThought);
 	game.player.main.playerDirection("F");
 
+	game.player.main.attachCharacter(game.player.sadly);
+
+	
+
 	CAM.connectPlayer(game.player.main);
 }
