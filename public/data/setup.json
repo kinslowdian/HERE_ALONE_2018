@@ -53,7 +53,7 @@
 						"U": "none",
 						"D": 5,
 						"L": 1,
-						"R": "none"
+						"R": 10
 					}
 				},
 
@@ -172,6 +172,108 @@
 						"U": 6,
 						"D": "none",
 						"L": 8,
+						"R": 15
+					}
+				},
+
+				{
+					"num_ref": 10, 
+					"x": 1925, 
+					"y": 1250, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": 12,
+						"L": 2,
+						"R": 11
+					}
+				},
+
+				{
+					"num_ref": 11, 
+					"x": 2640, 
+					"y": 1250, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": 14,
+						"L": 10,
+						"R": "none"
+					}
+				},
+
+				{
+					"num_ref": 12, 
+					"x": 1925, 
+					"y": 1875, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": 10,
+						"D": "none",
+						"L": 13,
+						"R": 14
+					}
+				},
+
+				{
+					"num_ref": 13, 
+					"x": 1595, 
+					"y": 1875, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": "none",
+						"L": "none",
+						"R": 12
+					}
+				},
+
+				{
+					"num_ref": 14, 
+					"x": 2640, 
+					"y": 1875, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": 11,
+						"D": 15,
+						"L": 12,
+						"R": "none"
+					}
+				},
+
+				{
+					"num_ref": 15, 
+					"x": 2640, 
+					"y": 2500, 
+					"isAnItem": false, 
+					"item_ref": "none", 
+					"devVis": "#333",
+					"ignore": false, 
+					"respond": 
+					{
+						"U": 14,
+						"D": "none",
+						"L": 9,
 						"R": "none"
 					}
 				}
