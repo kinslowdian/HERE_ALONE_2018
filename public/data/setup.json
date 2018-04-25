@@ -8,12 +8,7 @@
 			[
 				{
 					"num_ref": 0, 
-					"x": 55, 
-					"y": 1250, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 55, "y": 1250, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": "none",
@@ -25,12 +20,7 @@
 
 				{
 					"num_ref": 1, 
-					"x": 605, 
-					"y": 1250, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 605, "y": 1250, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": "none",
@@ -42,12 +32,7 @@
 
 				{
 					"num_ref": 2, 
-					"x": 1155, 
-					"y": 1250, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 1155, "y": 1250, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": "none",
@@ -59,12 +44,7 @@
 
 				{
 					"num_ref": 3, 
-					"x": 55, 
-					"y": 1875, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 55, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 0,
@@ -76,12 +56,7 @@
 
 				{
 					"num_ref": 4, 
-					"x": 605, 
-					"y": 1875, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 605, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 1,
@@ -93,12 +68,7 @@
 
 				{
 					"num_ref": 5, 
-					"x": 1155, 
-					"y": 1875, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 1155, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 2,
@@ -110,12 +80,7 @@
 
 				{
 					"num_ref": 6, 
-					"x": 1485, 
-					"y": 1875, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 1485, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": "none",
@@ -127,12 +92,7 @@
 
 				{
 					"num_ref": 7, 
-					"x": 55, 
-					"y": 2500, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 55, "y": 2500, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 3,
@@ -144,12 +104,7 @@
 
 				{
 					"num_ref": 8, 
-					"x": 1155, 
-					"y": 2500, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 1155, "y": 2500, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 5,
@@ -161,12 +116,7 @@
 
 				{
 					"num_ref": 9, 
-					"x": 1485, 
-					"y": 2500, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 1485, "y": 2500, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 6,
@@ -178,12 +128,7 @@
 
 				{
 					"num_ref": 10, 
-					"x": 1925, 
-					"y": 1250, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 1925, "y": 1250, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": "none",
@@ -195,12 +140,7 @@
 
 				{
 					"num_ref": 11, 
-					"x": 2640, 
-					"y": 1250, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 2640, "y": 1250, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": "none",
@@ -212,12 +152,7 @@
 
 				{
 					"num_ref": 12, 
-					"x": 1925, 
-					"y": 1875, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 1925, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 10,
@@ -229,12 +164,7 @@
 
 				{
 					"num_ref": 13, 
-					"x": 1595, 
-					"y": 1875, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 1595, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": "none",
@@ -246,12 +176,7 @@
 
 				{
 					"num_ref": 14, 
-					"x": 2640, 
-					"y": 1875, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 2640, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 11,
@@ -263,12 +188,7 @@
 
 				{
 					"num_ref": 15, 
-					"x": 2640, 
-					"y": 2500, 
-					"isAnItem": false, 
-					"item_ref": "none", 
-					"devVis": "#333",
-					"ignore": false, 
+					"x": 2640, "y": 2500, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
 					"respond": 
 					{
 						"U": 14,
@@ -277,6 +197,8 @@
 						"R": "none"
 					}
 				}
+
+
 			]
 		}
 	]
