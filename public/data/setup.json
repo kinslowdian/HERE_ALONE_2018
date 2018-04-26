@@ -146,7 +146,7 @@
 						"U": "none",
 						"D": 14,
 						"L": 10,
-						"R": "none"
+						"R": 18
 					}
 				},
 
@@ -182,7 +182,7 @@
 						"U": 11,
 						"D": 15,
 						"L": 12,
-						"R": "none"
+						"R": 17
 					}
 				},
 
@@ -194,10 +194,93 @@
 						"U": 14,
 						"D": "none",
 						"L": 9,
+						"R": 16
+					}
+				},
+
+				{
+					"num_ref": 16, 
+					"x": 3685, "y": 2500, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
+					"respond": 
+					{
+						"U": 17,
+						"D": "none",
+						"L": 15,
+						"R": 21
+					}
+				},
+
+				{
+					"num_ref": 17, 
+					"x": 3685, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
+					"respond": 
+					{
+						"U": 18,
+						"D": 16,
+						"L": 20,
+						"R": 14
+					}
+				},
+
+				{
+					"num_ref": 18, 
+					"x": 3685, "y": 1250, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": 17,
+						"L": 11,
+						"R": 19
+					}
+				},
+
+				{
+					"num_ref": 19, 
+					"x": 4730, "y": 1250, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": 20,
+						"L": 18,
+						"R": "none"
+					}
+				},
+
+				{
+					"num_ref": 20, 
+					"x": 4730, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
+					"respond": 
+					{
+						"U": 19,
+						"D": 21,
+						"L": 17,
+						"R": "none"
+					}
+				},
+
+				{
+					"num_ref": 21, 
+					"x": 4730, "y": 2500, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
+					"respond": 
+					{
+						"U": 20,
+						"D": "none",
+						"L": 16,
+						"R": 22
+					}
+				},
+
+				{
+					"num_ref": 22, 
+					"x": 5005, "y": 2500, "isAnItem": false, "item_ref": "none", "devVis": "#333", "ignore": false, 
+					"respond": 
+					{
+						"U": "none",
+						"D": "none",
+						"L": 21,
 						"R": "none"
 					}
 				}
-
 
 			]
 		}

@@ -85,7 +85,7 @@ function camera_newFocus()
 {
 	let sectionOBJ = levelKit.sectionsARR[levelKit.sectionFocus];
 
-	trace("camera_newFocus();")
+	// trace("camera_newFocus();")
 
 	CAM.viewerUpdateValues();
 
