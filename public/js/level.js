@@ -85,6 +85,11 @@ function camera_newFocus()
 {
 	let sectionOBJ = levelKit.sectionsARR[levelKit.sectionFocus];
 
+	if(sectionOBJ.exit)
+	{
+		levelKit.levelChange = true;
+	}
+
 	// trace("camera_newFocus();")
 
 	CAM.viewerUpdateValues();
@@ -100,6 +105,11 @@ function camera_newFocus()
 	if(levelKit.itemEvent)
 	{
 		// DO NOTHING
+	}
+
+	else if(levelKit.levelChange)
+	{
+
 	}
 
 	else

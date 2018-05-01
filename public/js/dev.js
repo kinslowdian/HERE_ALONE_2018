@@ -36,6 +36,8 @@ function level_build()
 	displayList.layerSections = document.querySelector(".layer-sections");
 	displayList.layerItems = document.querySelector(".layer-items");
 
+	levelKit.levelChange = false;
+
 	section_init();
 	item_init();
 	camera_init();

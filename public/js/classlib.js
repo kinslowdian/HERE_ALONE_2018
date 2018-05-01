@@ -114,6 +114,8 @@ class Section
 		this.item_ref = props.item_ref;
 		this.ignore = props.ignore;
 		this.respond = props.respond;
+		this.exit = props.exit;
+		this.go = props.go;
 
 		trace(props);
 
