@@ -134,7 +134,15 @@ class Section
 
 	build()
 	{
-		this.htmlBuild = '<div class="section ' + this.classBuild + '"><p>' + this.num + '</p></div>';
+		if(this.bg === "none")
+		{
+			this.htmlBuild = '<div class="section ' + this.classBuild + '"></div>';
+		}
+
+		else
+		{
+			this.htmlBuild = '<div class="section ' + this.classBuild + '"><p>' + this.num + '</p></div>';
+		}
 	}
 
 	list(htmlAttach)
