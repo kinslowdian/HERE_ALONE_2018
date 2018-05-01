@@ -70,3 +70,66 @@ function level_start()
 {
 	// FADE ETC... START
 }
+
+var fader;
+
+function fader_init()
+{
+	fader = {};
+	fader.htmlAttach = {};
+	fader.htmlAttach.outer = document.querySelector(".fader-wrapper");
+	fader.htmlAttach.inner = document.querySelector(".fader");
+}
+
+function fader_request(actionS, actionE)
+{
+	fader.actionS = actionS;
+	fader.actionE = actionE;
+
+	fader.htmlAttach.outer.classList.remove("fader-off");
+
+	fader.htmlAttach.inner.addEventListener("transitionend", fader_event, false);
+
+	fader.htmlAttach.inner.classList.remove("fader-default");
+}
+
+function fader_event(event)
+{
+	let delay;
+
+	fader.htmlAttach.inner.removeEventListener("transitionend", fader_event, false);
+
+	fader.actionS();
+
+	delay = setTimeout(fader_reverse, 0.2 * 1000);
+}
+
+function fader_reverse()
+{
+	fader.htmlAttach.inner.addEventListener("transitionend", fader_end, false);
+
+	fader.htmlAttach.inner.classList.add("fader-default");
+}
+
+function fader_end(event)
+{
+	fader.htmlAttach.inner.removeEventListener("transitionend", fader_end, false);
+
+	fader.htmlAttach.outer.classList.add("fader-off");
+
+	fader.actionE();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
