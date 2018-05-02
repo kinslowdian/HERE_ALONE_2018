@@ -9,8 +9,12 @@ var exitFrame; //CODE DELAY
 function hack_levelLoad()
 {
 	game.level = 0;
+	game.sectionStart = 0;
+
+	fader_init();
 
 	level_new();
+	level_build(true);
 
 	resize_init(true);
 
@@ -27,11 +31,9 @@ function level_new()
 	displayList.viewer.innerHTML = system.data.html_levels[game.level];
 	displayList.viewer_bg.innerHTML = system.data.html_levels_bg[game.level];
 	displayList.viewer_fg.innerHTML = system.data.html_levels_fg[game.level];
-
-	level_build();
 }
 
-function level_build()
+function level_build(auto)
 {
 	displayList.layerSections = document.querySelector(".layer-sections");
 	displayList.layerItems = document.querySelector(".layer-items");
@@ -45,9 +47,12 @@ function level_build()
 	player_init();
 	control_init();
 
-	section_request(0);
+	section_request(game.sectionStart);
 
-	exitFrame = setTimeout(level_transitionsAdd, 60);
+	if(auto)
+	{
+		exitFrame = setTimeout(level_transitionsAdd, 60);
+	}
 }
 
 function level_transitionsAdd()
@@ -69,6 +74,17 @@ function level_controlAdd()
 function level_start()
 {
 	// FADE ETC... START
+}
+
+function level_change()
+{
+	level_new();
+	level_build(false);
+}
+
+function level_ready()
+{
+	level_transitionsAdd();
 }
 
 var fader;
