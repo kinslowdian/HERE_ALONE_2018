@@ -116,6 +116,7 @@ class Section
 		this.respond = props.respond;
 		this.exit = props.exit;
 		this.go = props.go;
+		this.start = props.start;
 
 		trace(props);
 

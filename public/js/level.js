@@ -110,6 +110,7 @@ function camera_newFocus()
 	else if(levelKit.levelChange)
 	{
 		game.level = sectionOBJ.go;
+		game.sectionStart = sectionOBJ.start;
 		fader_request(level_change, level_ready);
 	}
 
