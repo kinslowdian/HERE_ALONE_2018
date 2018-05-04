@@ -321,8 +321,8 @@
 					{
 						"U": "none",
 						"D": "none",
-						"L": 1,
-						"R": 22
+						"L": 22,
+						"R": 1
 					}
 				},
 
@@ -580,7 +580,7 @@
 
 				{
 					"num_ref": 22, 
-					"x": 55, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "none", "ignore": false, "exit": false, "go": false, "start": false, 
+					"x": 55, "y": 1875, "isAnItem": false, "item_ref": "none", "devVis": "none", "ignore": false, "exit": true, "go": 0, "start": 6, 
 					"respond": 
 					{
 						"U": "none",
@@ -592,7 +592,7 @@
 
 				{
 					"num_ref": 23, 
-					"x": 4675, "y": 1125, "isAnItem": false, "item_ref": "none", "devVis": "none", "ignore": false, "exit": true, "go": 1, "start": 0, 
+					"x": 4675, "y": 1125, "isAnItem": false, "item_ref": "none", "devVis": "none", "ignore": false, "exit": true, "go": 2, "start": 0, 
 					"respond": 
 					{
 						"U": "none",
