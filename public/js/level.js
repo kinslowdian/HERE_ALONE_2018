@@ -2,6 +2,7 @@ function section_init()
 {
 	levelKit.sectionsARR = new Array();
 	levelKit.sectionFocus = null;
+	levelKit.level_type = system.data.json.LEVELS[game.level].level_type;
 
 	displayList.sectionsELM = {};
 

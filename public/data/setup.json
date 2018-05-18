@@ -4,6 +4,8 @@
 		{
 			"data_id": 0,
 
+			"level_type": "woods",
+
 			"sections":
 			[
 				{
@@ -311,6 +313,8 @@
 
 		{
 			"data_id": 1,
+
+			"level_type": "woods",
 
 			"sections":
 			[
