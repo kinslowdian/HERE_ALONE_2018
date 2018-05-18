@@ -1,1 +1,27 @@
-<svg id="Layer_1_copy" data-name="Layer 1 copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><style>.cls-1{fill:#082225;}</style></defs><title>ui_arrow</title><polygon class="cls-1" points="40 20 16 0 16 5 0 5 0 35 16 35 16 40 40 20"/></svg>
+<svg id="BJQqhl56G" data-name="Layer 1 copy" xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 60 40">
+    <style>
+        @-webkit-keyframes SJxm9nlqpM_HyUn3e9pz_Animation{
+0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}
+40%{-webkit-transform: translate(-50%, 0px);transform: translate(-50%, 0px);}
+  80%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}
+100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}
+@keyframes SJxm9nlqpM_HyUn3e9pz_Animation{
+0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}
+40%{-webkit-transform: translate(-50%, 0px);transform: translate(-50%, 0px);}
+  80%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}
+100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}
+#BJQqhl56G *{-webkit-animation-duration: 400ms;animation-duration: 400ms;-webkit-animation-iteration-count: infinite;animation-iteration-count: infinite;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}
+#SJxm9nlqpM{fill: #082225;}
+#SJxm9nlqpM_HyUn3e9pz{-webkit-animation-name: SJxm9nlqpM_HyUn3e9pz_Animation;animation-name: SJxm9nlqpM_HyUn3e9pz_Animation;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}
+    </style>
+    <defs/>
+    <title>
+        ui_arrow
+    </title>
+    <g id="SJxm9nlqpM_HyUn3e9pz" data-animator-group="true" data-animator-type="0">
+        <polygon points="40 20 16 0 16 5 0 5 0 35 16 35 16 40 40 20" id="SJxm9nlqpM"/>
+    </g>
+    <script>
+        (function(){var a=document.querySelector('#BJQqhl56G'),b=a.querySelectorAll('style'),c=function(d){b.forEach(function(f){var g=f.textContent;g&amp;&amp;(f.textContent=g.replace(/transform-box:[^;\r\n]*/gi,'transform-box: '+d))})};c('initial'),window.requestAnimationFrame(function(){return c('fill-box')})})();
+    </script>
+</svg>
