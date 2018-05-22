@@ -289,7 +289,7 @@ html, body
 	100%	{transform: translateX(0);}
 }
 
-.over-fx, .fx-ambience
+.fx-over, .fx-ambience
 {
 	width: 100%;
 	height: 100%;
