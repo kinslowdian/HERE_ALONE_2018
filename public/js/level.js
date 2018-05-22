@@ -3,6 +3,7 @@ function section_init()
 	levelKit.sectionsARR = new Array();
 	levelKit.sectionFocus = null;
 	levelKit.level_type = system.data.json.LEVELS[game.level].level_type;
+	levelKit.edge_apply = system.data.json.LEVELS[game.level].edge_apply;
 
 	displayList.sectionsELM = {};
 
@@ -13,6 +14,11 @@ function section_init()
 		let s = new Section(levelKit.unitW, levelKit.unitH, system.data.json.LEVELS[game.level].sections[i]);
 
 		levelKit.sectionsARR.push(s);
+	}
+
+	if(levelKit.edge_apply !== "none")
+	{
+		displayList.fx_edge.classList.add(levelKit.edge_apply);
 	}
 
 	trace(levelKit.sectionsARR);
@@ -78,7 +84,7 @@ function camera_init()
 
 	CAM.updateResizeCamera();
 	CAM.connectViewer(displayList.viewer);
-	// CAM.connectViewerOther(displayList.layer0);
+	// CAM.connectViewerOther(displayList.viewer_fg);
 }
 
 // ON END OF CAMERA TRANSITIONS

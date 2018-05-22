@@ -6,6 +6,8 @@
 
 			"level_type": "woods",
 
+			"edge_apply": "woods-fx-edge",
+
 			"sections":
 			[
 				{
@@ -315,6 +317,8 @@
 			"data_id": 1,
 
 			"level_type": "woods",
+
+			"edge_apply": "woods-fx-edge",
 
 			"sections":
 			[

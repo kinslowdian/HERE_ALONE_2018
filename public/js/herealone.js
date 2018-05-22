@@ -41,7 +41,8 @@ function hereAlone_init()
 	displayList.camera = document.querySelector(".camera");
 	displayList.viewer = document.querySelector(".camera .viewer");
 	displayList.viewer_bg = document.querySelector(".viewer-bg");
-	displayList.viewer_fg = document.querySelector(".viewer-fg");
+	displayList.fx_ambience = document.querySelector(".fx-ambience");
+	displayList.fx_edge = document.querySelector(".fx-edge");
 
 	levelKit = {};
 	levelKit.unitW = 55;
