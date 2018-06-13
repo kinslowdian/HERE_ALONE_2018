@@ -63,7 +63,7 @@
 
 .tween-rain-flow
 {
-	animation: tweenRainFlowFrames 200ms linear infinite;
+	animation: tweenRainFlowFrames 400ms linear infinite;
 }
 
 @keyframes tweenRainFlowFrames
@@ -71,6 +71,8 @@
 	0%		{transform: translateY(0px);}
 	100%	{transform: translateY(400px);}
 }
+
+/*REMOVE*/
 
 .thunder
 {
