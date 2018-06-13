@@ -409,3 +409,128 @@ class Sadly
 	}
 
 }
+
+class SoundFX
+{
+	constructor(main, muteOption)
+	{
+		this.main = main;
+		this.mute = muteOption;
+
+		this.muteApply();
+	}
+
+	create(params)
+	{
+		this.instanceClass 	= params.instanceClass;
+		this.loop 			= params.loop || false;
+		this.playCount 		= 0;
+		this.playMax 		= params.playMax || 1;
+		this.randomPlay		= params.randomPlay || false;
+		this.onEndFunct		= params.onEndFunct || false;
+		this.delayTimer		= false;
+		this.playing		= false;
+
+		this.main.addEventListener("ended", this.event_sound.bind(this), false);
+
+		trace(this.main);
+	}
+
+	muteApply()
+	{
+		if(this.mute)
+		{
+			this.main.volume = 0;
+			this.main.muted = true;
+		}
+
+		else
+		{
+			this.main.volume = 1;
+			this.main.muted = false;
+		}
+	}
+
+	setRandDelay(hi, lo)
+	{
+		this.soundDelayHI = hi;
+		this.soundDelayLO = lo;
+	}
+
+	soundPlay()
+	{
+		if(!this.playing)
+		{
+			this.playing = true;
+
+			this.main.currentTime = 0;
+			this.main.play();
+		}
+	}
+
+	soundStop()
+	{
+		this.main.pause();
+		
+		if(this.delayTimer)
+		{
+			clearTimeout(this.delayTimer);
+		}
+	}
+
+	soundMute(apply)
+	{
+		this.mute = apply;
+
+		this.muteApply();
+	}
+
+	soundRandPlay()
+	{
+		this.soundDelay = Math.round(Math.random() * (this.soundDelayHI - this.soundDelayLO) + this.soundDelayLO);
+
+		this.delayTimer = setTimeout(this.soundPlay.bind(this), this.soundDelay * 1000);
+	}
+
+	soundKill()
+	{
+		this.main.removeEventListener("ended", this.event_sound.bind(this), false);
+	}
+
+	event_sound(event)
+	{
+		if(event.type === "ended")
+		{
+			
+			this.playing = false;
+
+			if(this.loop)
+			{
+				this.playCount ++;
+
+				if(this.playCount < this.playMax)
+				{
+					if(this.randomPlay)
+					{
+						this.soundRandPlay();
+					}
+
+					else
+					{
+						this.soundPlay();
+					}
+				}
+
+				else
+				{
+					this.loop = false;
+				}
+			}
+
+			if(this.onEndFunct)
+			{
+				this.onEndFunct();
+			}
+		}
+	}
+}

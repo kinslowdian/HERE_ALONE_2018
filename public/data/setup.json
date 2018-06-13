@@ -8,6 +8,13 @@
 
 			"edge_apply": "woods-fx-edge",
 
+			"sound":
+			[
+				{"instanceClass": "sfx_thunder"},
+				{"instanceClass": "sfx_lightning"},
+				{"instanceClass": "thunderClap", "loop": true, "playMax": 3, "randomPlay": true}
+			],
+
 			"sections":
 			[
 				{
@@ -319,6 +326,11 @@
 			"level_type": "woods",
 
 			"edge_apply": "woods-fx-edge",
+
+			"sound":
+			[
+
+			],
 
 			"sections":
 			[
