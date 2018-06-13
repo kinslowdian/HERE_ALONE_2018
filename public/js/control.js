@@ -333,9 +333,17 @@ function ui_activate(obj)
 	obj.show = true;
 	obj.hasEvent = true;
 	obj.htmlAttach.classList.remove("ui-default");
-	obj.htmlAttach.addEventListener("click", ui_event, false);
-	obj.htmlAttach.addEventListener("touchstart", ui_event, false);
-	obj.htmlAttach.addEventListener("touchend", ui_event, false);
+
+	if(general.touchDevice)
+	{
+		obj.htmlAttach.addEventListener("touchstart", ui_event, false);
+		obj.htmlAttach.addEventListener("touchend", ui_event, false);
+	}
+
+	else
+	{
+		obj.htmlAttach.addEventListener("click", ui_event, false);
+	}
 }
 
 function ui_reset()
@@ -351,9 +359,16 @@ function ui_reset()
 		
 		if(ui.list[i].hasEvent)
 		{
-			ui.list[i].htmlAttach.removeEventListener("click", ui_event, false);
-			ui.list[i].htmlAttach.removeEventListener("touchstart", ui_event, false);
-			ui.list[i].htmlAttach.removeEventListener("touchend", ui_event, false);
+			if(general.touchDevice)
+			{
+				ui.list[i].htmlAttach.removeEventListener("touchstart", ui_event, false);
+				ui.list[i].htmlAttach.removeEventListener("touchend", ui_event, false);
+			}
+
+			else
+			{
+				ui.list[i].htmlAttach.removeEventListener("click", ui_event, false);
+			}
 		}
 	}
 

@@ -8,16 +8,30 @@ var sadly;
 var html_lib;
 var control;
 var ui;
+var general;
 
 function pageLoad_init()
 {
 	trace("pageLoad_init();");
-	project_ios_fix_init();
+	
+	general = {};
+	general.touchDevice = false;
+	general.soundFeature = false;
+
+	window.addEventListener("touchstart", () => {general.touchDevice = true;}, false);
+
+	if(general.touchDevice)
+	{
+		project_ios_fix_init();
+	}
+
 	hereAlone_init();
 }
 
 function project_ios_fix_init()
 {
+	window.removeEventListener("touchstart", () => {general.touchDevice = true;}, false);
+
 	document.addEventListener("gesturestart", project_ios_fix_event, false);
 	document.addEventListener("touchcancel", project_ios_fix_event, false);
 }
