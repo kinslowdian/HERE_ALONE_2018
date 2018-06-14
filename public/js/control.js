@@ -334,7 +334,7 @@ function ui_activate(obj)
 	obj.hasEvent = true;
 	obj.htmlAttach.classList.remove("ui-default");
 
-	if(general.touchDevice)
+	if(system.touchDevice)
 	{
 		obj.htmlAttach.addEventListener("touchstart", ui_event, false);
 		obj.htmlAttach.addEventListener("touchend", ui_event, false);
@@ -359,7 +359,7 @@ function ui_reset()
 		
 		if(ui.list[i].hasEvent)
 		{
-			if(general.touchDevice)
+			if(system.touchDevice)
 			{
 				ui.list[i].htmlAttach.removeEventListener("touchstart", ui_event, false);
 				ui.list[i].htmlAttach.removeEventListener("touchend", ui_event, false);

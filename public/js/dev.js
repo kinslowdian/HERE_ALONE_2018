@@ -145,7 +145,73 @@ function fader_end(event)
 
 
 
+function intro_init()
+{
+	displayList.libAudio = document.querySelector(".lib-audio");
 
+	displayList.intro = document.querySelector(".ha-intro");
+	displayList.introBtn = document.querySelector(".ha-intro-btn");
+}
+
+function intro_ready()
+{
+	displayList.introBtn.classList.remove("ha-intro-btn-default");
+
+	if(system.touchDevice)
+	{
+		displayList.introBtn.addEventListener("touchend", intro_event, false);
+	}
+
+	else
+	{
+		displayList.introBtn.addEventListener("click", intro_event, false);
+	}
+}
+
+function intro_event(event)
+{
+	if(system.touchDevice)
+	{
+		displayList.introBtn.removeEventListener("touchend", intro_event, false);
+	}
+
+	else
+	{
+		displayList.introBtn.removeEventListener("click", intro_event, false);
+	}
+
+	intro_soundTest();
+
+	intro_remove();
+}
+
+function intro_remove()
+{
+	displayList.intro.remove();
+}
+
+function intro_soundTest()
+{
+	let testAudio = document.querySelector(".sfx_soundTest");
+	let promise = testAudio.play();
+
+	if(promise !== undefined)
+	{
+		promise.then(_ => { soundTest_pass(); }).catch(error => { soundTest_fail(); });
+	}	
+}
+
+function soundTest_pass()
+{
+	system.soundFeature = true;	
+}
+
+function soundTest_fail()
+{
+	system.soundFeature = false;
+
+	displayList.libAudio.remove();
+}
 
 
 

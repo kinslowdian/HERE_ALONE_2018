@@ -8,19 +8,19 @@ var sadly;
 var html_lib;
 var control;
 var ui;
-var general;
 
 function pageLoad_init()
 {
 	trace("pageLoad_init();");
 	
-	general = {};
-	general.touchDevice = false;
-	general.soundFeature = false;
+	system = {};
+	system.touchDevice = false;
+	system.soundFeature = false;
+	system.soundMuted = false;
 
-	window.addEventListener("touchstart", () => {general.touchDevice = true;}, false);
+	window.addEventListener("touchstart", () => {system.touchDevice = true;}, false);
 
-	if(general.touchDevice)
+	if(system.touchDevice)
 	{
 		project_ios_fix_init();
 	}
@@ -30,7 +30,7 @@ function pageLoad_init()
 
 function project_ios_fix_init()
 {
-	window.removeEventListener("touchstart", () => {general.touchDevice = true;}, false);
+	window.removeEventListener("touchstart", () => {system.touchDevice = true;}, false);
 
 	document.addEventListener("gesturestart", project_ios_fix_event, false);
 	document.addEventListener("touchcancel", project_ios_fix_event, false);
@@ -45,7 +45,7 @@ function hereAlone_init()
 {
 	html_lib_read();
 
-	system = {};
+	// system = {};
 	system.data = {};
 	system.data.json  = null;
 	system.data.html_levels = null;
@@ -58,6 +58,8 @@ function hereAlone_init()
 	displayList.fx_ambience = document.querySelector(".fx-ambience");
 	displayList.fx_edge = document.querySelector(".fx-edge");
 
+	displayList.linAudio = document.querySelector(".lib-audio");
+
 	levelKit = {};
 	levelKit.unitW = 55;
 	levelKit.unitH = 125;
@@ -66,6 +68,9 @@ function hereAlone_init()
 
 	// LOAD DATA 0
 	hereAlone_data0_find();
+
+	// INTRO REGISTER (dev.js)
+	intro_init();
 }
 
 function displayList_register(name, selector)
@@ -134,8 +139,11 @@ function hereAlone_data3_read(data)
 
 	trace(system.data.html_levels_fg);
 
-	// READY TO START
+	// READY TO START IN dev.js
 	hack_levelLoad();
+
+	// ALOW INTRO REMOVE
+	intro_ready();
 }
 
 function html_lib_read()
