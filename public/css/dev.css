@@ -146,3 +146,19 @@
 {
 	transition: 300ms linear;
 }
+
+.mute
+{
+	width: 44px;
+	height: 44px;
+
+	display: block;
+
+	background: #ff0033;
+
+	position: absolute;
+
+	left: 20px; top: 20px;
+
+	border-radius: 50%;
+}

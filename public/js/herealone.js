@@ -17,6 +17,7 @@ function pageLoad_init()
 	system.touchDevice = false;
 	system.soundFeature = false;
 	system.soundMuted = false;
+	system.soundList = false;
 
 	window.addEventListener("touchstart", () => {system.touchDevice = true;}, false);
 

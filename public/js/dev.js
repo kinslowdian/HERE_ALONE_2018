@@ -151,6 +151,8 @@ function intro_init()
 
 	displayList.intro = document.querySelector(".ha-intro");
 	displayList.introBtn = document.querySelector(".ha-intro-btn");
+
+	displayList.mute = document.querySelector(".mute");
 }
 
 function intro_ready()
@@ -173,14 +175,16 @@ function intro_event(event)
 	if(system.touchDevice)
 	{
 		displayList.introBtn.removeEventListener("touchend", intro_event, false);
+		
+		soundTest_fail();
 	}
 
 	else
 	{
 		displayList.introBtn.removeEventListener("click", intro_event, false);
+		
+		intro_soundTest();
 	}
-
-	intro_soundTest();
 
 	intro_remove();
 }
@@ -203,7 +207,9 @@ function intro_soundTest()
 
 function soundTest_pass()
 {
-	system.soundFeature = true;	
+	system.soundFeature = true;
+
+	displayList.mute.addEventListener("click", sound_mute, false);
 }
 
 function soundTest_fail()
@@ -211,6 +217,56 @@ function soundTest_fail()
 	system.soundFeature = false;
 
 	displayList.libAudio.remove();
+
+	displayList.mute.remove();
+}
+
+function sound_level()
+{
+	if(system.soundFeature)
+	{
+		system.soundList = {};
+	}
+}
+
+function sound_build(params)
+{
+	system.soundList[params.instanceClass] = new SoundFX(document.querySelector("." + params.instanceClass), system.soundMuted);
+	system.soundList[params.instanceClass].create(params);
+}
+
+function sound_mute(event)
+{
+	if(system.soundMuted)
+	{
+		system.soundMuted = false;
+	}
+
+	else
+	{
+		system.soundMuted = true;
+	}
+
+	if(system.soundList)
+	{
+		for(var i in system.soundList)
+		{
+			system.soundList[i].soundMute(system.soundMuted);
+		}
+	}
+}
+
+function sound_purge()
+{
+	for(var i in system.soundList)
+	{
+		system.soundList[i].soundStop();
+		system.soundList[i].soundKill();
+	}
+
+	// SOUND FLUSH
+	system.soundList = {};
+	system.soundList = false;
 }
 
 

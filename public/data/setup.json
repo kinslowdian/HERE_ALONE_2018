@@ -15,6 +15,11 @@
 				{"instanceClass": "thunderClap", "loop": true, "playMax": 3, "randomPlay": true}
 			],
 
+			"sound_custom":
+			[
+
+			],
+
 			"sections":
 			[
 				{
