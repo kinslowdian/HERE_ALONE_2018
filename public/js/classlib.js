@@ -451,12 +451,27 @@ class SoundFX
 		}
 	}
 
-	setRandDelay(hi, lo)
+	setRandDelay(params)
 	{
-		this.soundDelayHI = hi;
-		this.soundDelayLO = lo;
+		this.soundDelayHI = params.hi;
+		this.soundDelayLO = params.lo;
 	}
 
+	// ENTRY
+	soundBegin()
+	{
+		if(this.randomPlay)
+		{
+			this.soundRandPlay();
+		}
+
+		else
+		{
+			this.soundPlay();
+		}
+	}
+
+	// DEFAULT
 	soundPlay()
 	{
 		if(!this.playing)
@@ -485,6 +500,7 @@ class SoundFX
 		this.muteApply();
 	}
 
+	// RANDOM
 	soundRandPlay()
 	{
 		this.soundDelay = Math.round(Math.random() * (this.soundDelayHI - this.soundDelayLO) + this.soundDelayLO);

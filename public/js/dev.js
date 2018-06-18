@@ -187,6 +187,8 @@ function intro_event(event)
 	}
 
 	intro_remove();
+
+	hack_levelLoad();
 }
 
 function intro_remove()
@@ -223,9 +225,48 @@ function soundTest_fail()
 
 function sound_level()
 {
+	trace("sound_level(); " + system.soundFeature);
+
 	if(system.soundFeature)
 	{
 		system.soundList = {};
+
+		for(var i in system.data.json.LEVELS[game.level].sound)
+		{
+			sound_build(system.data.json.LEVELS[game.level].sound[i]);
+		}
+
+		sound_level_stage_A();
+	}
+}
+
+function sound_level_stage_A()
+{
+	for(var j in system.data.json.LEVELS[game.level].sound_custom)
+	{
+		let target_instanceClass 	= system.data.json.LEVELS[game.level].sound_custom[j].instanceClass;
+		let target_callFunct 		= system.data.json.LEVELS[game.level].sound_custom[j].funct;
+		let target_callParams 		= system.data.json.LEVELS[game.level].sound_custom[j].params || false;
+
+		if(target_callParams)
+		{
+			system.soundList[target_instanceClass][target_callFunct](target_callParams);
+		}
+
+		else
+		{
+			system.soundList[target_instanceClass][target_callFunct]();
+		}
+	}
+
+	sound_level_stage_B();
+}
+
+function sound_level_stage_B()
+{
+	for(var i in system.soundList)
+	{
+		system.soundList[i].soundBegin();
 	}
 }
 

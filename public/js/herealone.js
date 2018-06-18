@@ -141,9 +141,10 @@ function hereAlone_data3_read(data)
 	trace(system.data.html_levels_fg);
 
 	// READY TO START IN dev.js
-	hack_levelLoad();
+	// hack_levelLoad();
+	// DELAYED NOW UNTIL INTRO CLICKED
 
-	// ALOW INTRO REMOVE
+	// ALOW INTRO REMOVE IN dev.js
 	intro_ready();
 }
 
