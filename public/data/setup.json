@@ -10,14 +10,14 @@
 
 			"sound":
 			[
-				{"instanceClass": "sfx_thunder"},
+				{"instanceClass": "sfx_thunder", "infinite": true},
 				{"instanceClass": "sfx_lightning"},
 				{"instanceClass": "sfx_thunderClap", "loop": true, "playMax": 3, "randomPlay": true}
 			],
 
 			"sound_custom":
 			[
-				{"instanceClass": "sfx_thunderClap", "funct": "setRandDelay", "params": {"hi": 6, "lo": 3}}
+				{"instanceClass": "sfx_thunderClap", "funct": "setRandDelay", "params": {"hi": 12, "lo": 4}}
 			],
 
 			"sections":

@@ -74,6 +74,8 @@ function level_controlAdd()
 function level_start()
 {
 	// FADE ETC... START
+
+	sound_level_A();
 }
 
 function level_change()
@@ -223,9 +225,9 @@ function soundTest_fail()
 	displayList.mute.remove();
 }
 
-function sound_level()
+function sound_level_A()
 {
-	trace("sound_level(); " + system.soundFeature);
+	trace("sound_level_A(); " + system.soundFeature);
 
 	if(system.soundFeature)
 	{
@@ -236,11 +238,11 @@ function sound_level()
 			sound_build(system.data.json.LEVELS[game.level].sound[i]);
 		}
 
-		sound_level_stage_A();
+		sound_level_stage_B();
 	}
 }
 
-function sound_level_stage_A()
+function sound_level_stage_B()
 {
 	for(var j in system.data.json.LEVELS[game.level].sound_custom)
 	{
@@ -259,10 +261,10 @@ function sound_level_stage_A()
 		}
 	}
 
-	sound_level_stage_B();
+	sound_level_stage_C();
 }
 
-function sound_level_stage_B()
+function sound_level_stage_C()
 {
 	for(var i in system.soundList)
 	{

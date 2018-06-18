@@ -426,6 +426,7 @@ class SoundFX
 		this.loop 			= params.loop || false;
 		this.playCount 		= 0;
 		this.playMax 		= params.playMax || 1;
+		this.infinite		= params.infinite || false;
 		this.randomPlay		= params.randomPlay || false;
 		this.onEndFunct		= params.onEndFunct || false;
 		this.delayTimer		= false;
@@ -520,26 +521,26 @@ class SoundFX
 			
 			this.playing = false;
 
-			if(this.loop)
+			if(this.infinite)
 			{
-				this.playCount ++;
+				this.soundBegin();
+			}
 
-				if(this.playCount < this.playMax)
+			else
+			{
+				if(this.loop)
 				{
-					if(this.randomPlay)
+					this.playCount ++;
+
+					if(this.playCount < this.playMax)
 					{
-						this.soundRandPlay();
+						this.soundBegin();
 					}
 
 					else
 					{
-						this.soundPlay();
+						this.loop = false;
 					}
-				}
-
-				else
-				{
-					this.loop = false;
 				}
 			}
 
