@@ -334,6 +334,11 @@
 
 			"sound":
 			[
+				{"instanceClass": "sfx_crows", "infinite": true, "vol": 0.15}
+			],
+
+			"sound_custom":
+			[
 
 			],
 

@@ -431,6 +431,12 @@ class SoundFX
 		this.onEndFunct		= params.onEndFunct || false;
 		this.delayTimer		= false;
 		this.playing		= false;
+		this.vol 			= params.vol || false;
+
+		if(this.vol)
+		{
+			this.main.volume = this.vol;
+		}
 
 		this.main.addEventListener("ended", this.event_sound.bind(this), false);
 

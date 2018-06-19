@@ -118,6 +118,9 @@ function camera_newFocus()
 	{
 		game.level = sectionOBJ.go;
 		game.sectionStart = sectionOBJ.start;
+
+		sound_purge();
+
 		fader_request(level_change, level_ready);
 	}
 
