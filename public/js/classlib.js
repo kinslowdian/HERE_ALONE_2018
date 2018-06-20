@@ -1,9 +1,10 @@
 class Camera
 {
-	constructor(main)
+	constructor(main, callBack)
 	{
 		this.htmlAttach = main;
 		this.viewerAdvanced = false;
+		this.callBack = callBack;
 	}
 
 	updateResizeCamera()
@@ -65,7 +66,7 @@ class Camera
 
 	viewerTransition()
 	{
-		this.viewer.addEventListener("transitionend", this.viewerTransitionEvent, false);
+		this.viewer.addEventListener("transitionend", this.viewerTransitionEvent.bind(this), false);
 
 		this.viewer.setAttribute("style", "transform: translate(" + this.viewer.x + "px, " + this.viewer.y + "px);");
 		
@@ -82,10 +83,14 @@ class Camera
 
 		if(caller === "viewer")
 		{
-			event.target.removeEventListener("transitionend", this.viewerTransitionEvent, false);
+			this.viewer.removeEventListener("transitionend", this.viewerTransitionEvent.bind(this), false);
+
+			// event.target.removeEventListener("transitionend", this.viewerTransitionEvent.bind(this), false);
 
 			// LINK BACK VALUES
-			camera_newFocus();
+			// camera_newFocus();
+		
+			this.callBack();
 		}
 	}
 
@@ -416,8 +421,6 @@ class SoundFX
 	{
 		this.main = main;
 		this.mute = muteOption;
-
-		this.muteApply();
 	}
 
 	create(params)
@@ -431,20 +434,20 @@ class SoundFX
 		this.onEndFunct		= params.onEndFunct || false;
 		this.delayTimer		= false;
 		this.playing		= false;
-		this.vol 			= params.vol || false;
+		this.vol 			= params.vol || 1;
 
-		if(this.vol)
-		{
-			this.main.volume = this.vol;
-		}
+		this.main.volume = this.vol;
 
 		this.main.addEventListener("ended", this.event_sound.bind(this), false);
 
 		trace(this.main);
+
+		this.muteApply();
 	}
 
 	muteApply()
 	{
+
 		if(this.mute)
 		{
 			this.main.volume = 0;
@@ -453,7 +456,7 @@ class SoundFX
 
 		else
 		{
-			this.main.volume = 1;
+			this.main.volume = this.vol;
 			this.main.muted = false;
 		}
 	}

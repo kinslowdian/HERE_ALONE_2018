@@ -80,7 +80,7 @@ function item_init()
 
 function camera_init()
 {
-	CAM = new Camera(displayList.camera);
+	CAM = new Camera(displayList.camera, camera_newFocus);
 
 	CAM.updateResizeCamera();
 	CAM.connectViewer(displayList.viewer);
