@@ -9,8 +9,8 @@ function level_new()
 
 function level_build(auto)
 {
-	displayList.layerSections = document.querySelector(".layer-sections");
-	displayList.layerItems = document.querySelector(".layer-items");
+	displayList.layerSections = displayList_add(".layer-sections");
+	displayList.layerItems = displayList_add(".layer-items");
 
 	levelKit.levelChange = false;
 
@@ -177,7 +177,7 @@ function section_display()
 {
 	for(let i in levelKit.sectionsARR)
 	{
-		displayList["section" + levelKit.sectionsARR[i].num] = document.querySelector("." + levelKit.sectionsARR[i].classBuild);
+		displayList["section" + levelKit.sectionsARR[i].num] = displayList_add("." + levelKit.sectionsARR[i].classBuild);
 		levelKit.sectionsARR[i].list(displayList["section" + levelKit.sectionsARR[i].num]);
 	}
 }

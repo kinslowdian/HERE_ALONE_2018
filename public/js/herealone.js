@@ -21,6 +21,8 @@ function pageLoad_init()
 	system.soundMuted = false;
 	system.soundList = false;
 
+	displayList = {};
+
 	window.addEventListener("touchstart", () => {system.touchDevice = true;}, false);
 
 	if(system.touchDevice)
@@ -54,14 +56,13 @@ function hereAlone_init()
 	system.data.html_levels = null;
 	system.resizeTimeout;
 
-	displayList = {};
-	displayList.camera = document.querySelector(".camera");
-	displayList.viewer = document.querySelector(".camera .viewer");
-	displayList.viewer_bg = document.querySelector(".viewer-bg");
-	displayList.fx_ambience = document.querySelector(".fx-ambience");
-	displayList.fx_edge = document.querySelector(".fx-edge");
+	displayList.camera = displayList_add(".camera");
+	displayList.viewer = displayList_add(".camera .viewer");
+	displayList.viewer_bg = displayList_add(".viewer-bg");
+	displayList.fx_ambience = displayList_add(".fx-ambience");
+	displayList.fx_edge = displayList_add(".fx-edge");
 
-	displayList.linAudio = document.querySelector(".lib-audio");
+	displayList.linAudio = displayList_add(".lib-audio");
 
 	levelKit = {};
 	levelKit.unitW = 55;
@@ -76,9 +77,10 @@ function hereAlone_init()
 	intro_init();
 }
 
-function displayList_register(name, selector)
+function displayList_add(selector)
 {
-	displayList[name] = document.querySelector(selector);
+	let obj = document.querySelector(selector);
+	return obj;
 }
 
 // DATA
@@ -202,6 +204,17 @@ function resize_apply()
 }
 
 //// SOUND
+
+function intro_soundTest()
+{
+	let testAudio = document.querySelector(".sfx_soundTest");
+	let promise = testAudio.play();
+
+	if(promise !== undefined)
+	{
+		promise.then(_ => { soundTest_pass(); }).catch(error => { soundTest_fail(); });
+	}	
+}
 
 function soundTest_pass()
 {

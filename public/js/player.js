@@ -26,11 +26,11 @@ function player_buildCharacter()
 
 function player_refresh(full)
 {
-	displayList.player = document.querySelector(".player");
-	displayList.playerInner = document.querySelector(".player-inner");
-	displayList.playerBase = document.querySelector(".player-base");
+	displayList.player = displayList_add(".player");
+	displayList.playerInner = displayList_add(".player-inner");
+	displayList.playerBase = displayList_add(".player-base");
 
-	displayList.sadly = document.querySelector(".sadly");
+	displayList.sadly = displayList_add(".sadly");
 
 	game.player.sadly = new Sadly(displayList.sadly);
 

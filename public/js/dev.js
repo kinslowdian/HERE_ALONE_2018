@@ -27,17 +27,14 @@ function hack_shift()
 }
 
 
-
-
-
 function intro_init()
 {
-	displayList.libAudio = document.querySelector(".lib-audio");
+	displayList.libAudio = displayList_add(".lib-audio");
 
-	displayList.intro = document.querySelector(".ha-intro");
-	displayList.introBtn = document.querySelector(".ha-intro-btn");
+	displayList.intro = displayList_add(".ha-intro");
+	displayList.introBtn = displayList_add(".ha-intro-btn");
 
-	displayList.mute = document.querySelector(".mute");
+	displayList.mute = displayList_add(".mute");
 }
 
 function intro_ready()
@@ -81,16 +78,7 @@ function intro_remove()
 	displayList.intro.remove();
 }
 
-function intro_soundTest()
-{
-	let testAudio = document.querySelector(".sfx_soundTest");
-	let promise = testAudio.play();
 
-	if(promise !== undefined)
-	{
-		promise.then(_ => { soundTest_pass(); }).catch(error => { soundTest_fail(); });
-	}	
-}
 
 
 
