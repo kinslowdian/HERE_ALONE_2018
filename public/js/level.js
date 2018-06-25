@@ -1,3 +1,124 @@
+//// LEVEL BUILD & CHANGE
+
+function level_new()
+{
+	displayList.viewer.innerHTML = system.data.html_levels[game.level];
+	displayList.viewer_bg.innerHTML = system.data.html_levels_bg[game.level];
+	displayList.fx_ambience.innerHTML = system.data.html_levels_fg[game.level];
+}
+
+function level_build(auto)
+{
+	displayList.layerSections = document.querySelector(".layer-sections");
+	displayList.layerItems = document.querySelector(".layer-items");
+
+	levelKit.levelChange = false;
+
+	section_init();
+	item_init();
+	camera_init();
+	ui_init();
+	player_init();
+	control_init();
+
+	section_request(game.sectionStart);
+
+	if(auto)
+	{
+		exitFrame = setTimeout(level_transitionsAdd, 60);
+	}
+}
+
+function level_transitionsAdd()
+{
+	game.player.main.attachMainTween();
+	CAM.attachMainTween();
+
+	level_controlAdd();
+}
+
+function level_controlAdd()
+{
+	camera_newFocus();
+	control_on(true);
+
+	level_start();
+}
+
+function level_start()
+{
+	// FADE ETC... START
+
+	sound_level_A();
+}
+
+function level_change()
+{
+	if(levelKit.edge_apply !== "none")
+	{
+		displayList.fx_edge.classList.add(levelKit.edge_apply);
+	}
+
+	level_new();
+	level_build(false);
+}
+
+function level_ready()
+{
+	level_transitionsAdd();
+}
+
+//// FADER
+
+function fader_init()
+{
+	fader = {};
+	fader.htmlAttach = {};
+	fader.htmlAttach.outer = document.querySelector(".fader-wrapper");
+	fader.htmlAttach.inner = document.querySelector(".fader");
+}
+
+function fader_request(actionS, actionE)
+{
+	fader.actionS = actionS;
+	fader.actionE = actionE;
+
+	fader.htmlAttach.outer.classList.remove("fader-off");
+
+	fader.htmlAttach.inner.addEventListener("transitionend", fader_event, false);
+
+	fader.htmlAttach.inner.classList.remove("fader-default");
+}
+
+function fader_event(event)
+{
+	let delay;
+
+	fader.htmlAttach.inner.removeEventListener("transitionend", fader_event, false);
+
+	fader.actionS();
+
+	delay = setTimeout(fader_reverse, 0.2 * 1000);
+}
+
+function fader_reverse()
+{
+	fader.htmlAttach.inner.addEventListener("transitionend", fader_end, false);
+
+	fader.htmlAttach.inner.classList.add("fader-default");
+}
+
+function fader_end(event)
+{
+	fader.htmlAttach.inner.removeEventListener("transitionend", fader_end, false);
+
+	fader.htmlAttach.outer.classList.add("fader-off");
+
+	fader.actionE();
+}
+
+//// SECTION
+
 function section_init()
 {
 	levelKit.sectionsARR = new Array();
@@ -71,12 +192,16 @@ function section_request(num)
 	}
 }
 
+//// ITEM
+
 // TODO
 function item_init()
 {
 	levelKit.itemsARR = new Array();
 	levelKit.itemEvent = false;
 }
+
+//// CAMERA CREATE & FOCUS
 
 function camera_init()
 {

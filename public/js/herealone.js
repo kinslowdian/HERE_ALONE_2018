@@ -8,6 +8,8 @@ var sadly;
 var html_lib;
 var control;
 var ui;
+var exitFrame; //CODE DELAY
+var fader;
 
 function pageLoad_init()
 {
@@ -197,6 +199,111 @@ function resize_apply()
 {
 	CAM.updateResizeCamera();
 	CAM.viewerFind(levelKit.sectionsARR[levelKit.sectionFocus]);
+}
+
+//// SOUND
+
+function soundTest_pass()
+{
+	system.soundFeature = true;
+
+	displayList.mute.addEventListener("click", sound_mute, false);
+}
+
+function soundTest_fail()
+{
+	system.soundFeature = false;
+
+	displayList.libAudio.remove();
+
+	displayList.mute.remove();
+}
+
+function sound_level_A()
+{
+	trace("sound_level_A(); " + system.soundFeature);
+
+	if(system.soundFeature)
+	{
+		system.soundList = {};
+
+		for(var i in system.data.json.LEVELS[game.level].sound)
+		{
+			sound_build(system.data.json.LEVELS[game.level].sound[i]);
+		}
+
+		sound_level_stage_B();
+	}
+}
+
+function sound_level_stage_B()
+{
+	for(var j in system.data.json.LEVELS[game.level].sound_custom)
+	{
+		let target_instanceClass 	= system.data.json.LEVELS[game.level].sound_custom[j].instanceClass;
+		let target_callFunct 		= system.data.json.LEVELS[game.level].sound_custom[j].funct;
+		let target_callParams 		= system.data.json.LEVELS[game.level].sound_custom[j].params || false;
+
+		if(target_callParams)
+		{
+			system.soundList[target_instanceClass][target_callFunct](target_callParams);
+		}
+
+		else
+		{
+			system.soundList[target_instanceClass][target_callFunct]();
+		}
+	}
+
+	sound_level_stage_C();
+}
+
+function sound_level_stage_C()
+{
+	for(var i in system.soundList)
+	{
+		system.soundList[i].soundBegin();
+	}
+}
+
+function sound_build(params)
+{
+	system.soundList[params.instanceClass] = new SoundFX(document.querySelector("." + params.instanceClass), system.soundMuted);
+	system.soundList[params.instanceClass].create(params);
+}
+
+function sound_mute(event)
+{
+	if(system.soundMuted)
+	{
+		system.soundMuted = false;
+	}
+
+	else
+	{
+		system.soundMuted = true;
+	}
+
+	if(system.soundList)
+	{
+		for(var i in system.soundList)
+		{
+			system.soundList[i].soundMute(system.soundMuted);
+		}
+	}
+}
+
+function sound_purge()
+{
+	for(var i in system.soundList)
+	{
+		system.soundList[i].soundStop();
+		system.soundList[i].soundKill();
+	}
+
+	// SOUND FLUSH
+	system.soundList = {};
+	system.soundList = false;
 }
 
 
