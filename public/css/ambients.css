@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.rain-container
+{
+	width: 400%;
+	height: 400%;
+
+	position: absolute;
+
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.rain-main
+{
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+
+	transform-origin: 50% 50%;
+	transform: rotate(45deg);
+}
+
+.rain-flow
+{
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+
+	/*background: url(../img/weather_rain.svg) center center repeat;*/
+	background-image: url(../img/weather_rain.svg);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 400px 400px;
+}
+
+.tween-rain-flow
+{
+	animation: tweenRainFlowFrames 400ms linear infinite;
+}
+
+@keyframes tweenRainFlowFrames
+{
+	0%		{transform: translateY(0px);}
+	100%	{transform: translateY(400px);}
+}

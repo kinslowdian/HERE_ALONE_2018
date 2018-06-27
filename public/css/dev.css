@@ -22,56 +22,6 @@
 }
 
 
-
-
-
-.rain-container
-{
-	width: 400%;
-	height: 400%;
-
-	position: absolute;
-
-	left: 50%; top: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.rain-main
-{
-	width: 100%;
-	height: 100%;
-
-	position: relative;
-
-	transform-origin: 50% 50%;
-	transform: rotate(45deg);
-}
-
-.rain-flow
-{
-	width: 100%;
-	height: 100%;
-
-	position: relative;
-
-	/*background: url(../img/weather_rain.svg) center center repeat;*/
-	background-image: url(../img/weather_rain.svg);
-	background-position: center center;
-	background-repeat: repeat;
-	background-size: 400px 400px;
-}
-
-.tween-rain-flow
-{
-	animation: tweenRainFlowFrames 400ms linear infinite;
-}
-
-@keyframes tweenRainFlowFrames
-{
-	0%		{transform: translateY(0px);}
-	100%	{transform: translateY(400px);}
-}
-
 /*REMOVE*/
 
 .thunder
@@ -109,6 +59,26 @@
 	position: absolute;
 }
 
+.ha-intro h1
+{
+	width: 80%;
+	font-size: 0.8em;
+	text-align: center;
+
+	margin: 0 auto;
+}
+
+.ha-intro p
+{
+	width: 40%;
+	max-width: 700px;
+	font-size: 0.1em;
+	line-height: 1.3;
+	text-align: center;
+
+	margin: 0 auto;
+}
+
 .ha-intro-inner
 {
 	width: inherit;
@@ -116,7 +86,28 @@
 
 	position: relative;
 
-	background: #000;
+	background: var(--offWhite);
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 0;
+}
+
+.ha-intro-top
+{
+	position: relative;
+	grid-row: 1;
+
+	/*background: black;*/
+}
+
+.ha-intro-btm
+{
+	position: relative;
+	grid-row: 2;
+
+	/*background: white;*/
 }
 
 .interactive
