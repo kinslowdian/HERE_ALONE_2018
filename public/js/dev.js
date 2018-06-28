@@ -33,6 +33,7 @@ function intro_init()
 
 	displayList.intro = displayList_add(".ha-intro");
 	displayList.introBtn = displayList_add(".ha-intro-btn");
+	displayList.introBtnMain = displayList_add(".ha-intro-btn p");
 
 	displayList.mute = displayList_add(".mute");
 }
@@ -43,12 +44,12 @@ function intro_ready()
 
 	if(system.touchDevice)
 	{
-		displayList.introBtn.addEventListener("touchend", intro_event, false);
+		displayList.introBtnMain.addEventListener("touchend", intro_event, false);
 	}
 
 	else
 	{
-		displayList.introBtn.addEventListener("click", intro_event, false);
+		displayList.introBtnMain.addEventListener("click", intro_event, false);
 	}
 }
 
@@ -56,14 +57,14 @@ function intro_event(event)
 {
 	if(system.touchDevice)
 	{
-		displayList.introBtn.removeEventListener("touchend", intro_event, false);
+		displayList.introBtnMain.removeEventListener("touchend", intro_event, false);
 		
 		soundTest_fail();
 	}
 
 	else
 	{
-		displayList.introBtn.removeEventListener("click", intro_event, false);
+		displayList.introBtnMain.removeEventListener("click", intro_event, false);
 		
 		intro_soundTest();
 	}

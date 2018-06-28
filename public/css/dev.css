@@ -59,26 +59,6 @@
 	position: absolute;
 }
 
-.ha-intro h1
-{
-	width: 80%;
-	font-size: 0.8em;
-	text-align: center;
-
-	margin: 0 auto;
-}
-
-.ha-intro p
-{
-	width: 40%;
-	max-width: 700px;
-	font-size: 0.1em;
-	line-height: 1.3;
-	text-align: center;
-
-	margin: 0 auto;
-}
-
 .ha-intro-inner
 {
 	width: inherit;
@@ -115,17 +95,57 @@
 	cursor: pointer;
 }
 
+.ha-title
+{
+	width: 80%;
+	font-size: 0.8em;
+	text-align: center;
+
+	position: relative;
+
+	margin: 0 auto 0.4em auto;
+}
+
+.ha-desc
+{
+	width: 40%;
+	max-width: 700px;
+
+	font-size: 0.1em;
+	font-weight: 400;
+	line-height: 1.3;
+	text-align: center;
+
+	position: relative;
+
+	margin: 0 auto;
+}
+
 .ha-intro-btn
 {
-	width: 200px;
-	height: 40px;
+	position: relative;
 
-	background: #ff0033;
+	margin: 0 auto;
 
-	position: absolute;
+	line-height: 0;
 
-	left: 50%; top: 50%;
-	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.ha-intro-btn p
+{
+	margin: 0 auto;
+	padding: 0;
+
+	position: relative;
+
+	display: inline-block;	
+
+	font-size: 0.3em;
+	text-align: center;
+	line-height: 1;
+
+	background: #000;
 }
 
 .ha-intro-btn-default
