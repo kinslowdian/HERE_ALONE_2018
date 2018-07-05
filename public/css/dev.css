@@ -208,6 +208,11 @@
 		width: 70%;
 		font-size: 0.2em;
 	}
+
+	.ha-intro-btn p
+	{
+		font-size: 0.4em;
+	}
 }
 
 /* PHABLET */
@@ -227,7 +232,12 @@
 	{
 		width: 70%;
 		font-size: 0.15em;
-	}	
+	}
+
+	.ha-intro-btn p
+	{
+		font-size: 0.4em;
+	}
 }
 
 /* TABLET */
@@ -247,6 +257,11 @@
 	{
 		width: 40%;
 		font-size: 0.1em;
+	}
+
+	.ha-intro-btn p
+	{
+		font-size: 0.35em;
 	}
 }
 
@@ -269,6 +284,10 @@
 		font-size: 0.1em;
 	}
 
+	.ha-intro-btn p
+	{
+		font-size: 0.3em;
+	}
 }
 
 
