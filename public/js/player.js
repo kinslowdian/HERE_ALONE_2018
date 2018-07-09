@@ -26,11 +26,11 @@ function player_buildCharacter()
 
 function player_refresh(full)
 {
-	displayList.player = displayList_add(".player");
-	displayList.playerInner = displayList_add(".player-inner");
-	displayList.playerBase = displayList_add(".player-base");
+	displayList.player = list$(".player");
+	displayList.playerInner = list$(".player-inner");
+	displayList.playerBase = list$(".player-base");
 
-	displayList.sadly = displayList_add(".sadly");
+	displayList.sadly = list$(".sadly");
 
 	game.player.sadly = new Sadly(displayList.sadly);
 

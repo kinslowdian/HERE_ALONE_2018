@@ -29,20 +29,20 @@ function hack_shift()
 
 function intro_init()
 {
-	displayList.libAudio = displayList_add(".lib-audio");
+	displayList.libAudio = list$(".lib-audio");
 
-	displayList.intro = displayList_add(".ha-intro");
-	displayList.introBtn = displayList_add(".ha-intro-btn");
-	displayList.introBtnMain = displayList_add(".ha-intro-btn p");
+	displayList.intro = list$(".ha-intro");
+	displayList.introBtn = list$(".ha-intro-btn");
+	displayList.introBtnMain = list$(".ha-intro-btn p");
 
-	displayList.introSadly = displayList_add(".ha-intro-top .sadly");
-	displayList.introSadlyBody = displayList_add(".ha-intro-top .sadly-top");
-	displayList.introSadlyLeg0 = displayList_add(".ha-intro-top .sadly-leg0");
-	displayList.introSadlyLeg1 = displayList_add(".ha-intro-top .sadly-leg1");
-	displayList.introSadlyJawT = displayList_add(".ha-intro-top .sadly-jawT");
-	displayList.introSadlyJawB = displayList_add(".ha-intro-top .sadly-jawB");
+	displayList.introSadly = list$(".ha-intro-top .sadly");
+	displayList.introSadlyBody = list$(".ha-intro-top .sadly-top");
+	displayList.introSadlyLeg0 = list$(".ha-intro-top .sadly-leg0");
+	displayList.introSadlyLeg1 = list$(".ha-intro-top .sadly-leg1");
+	displayList.introSadlyJawT = list$(".ha-intro-top .sadly-jawT");
+	displayList.introSadlyJawB = list$(".ha-intro-top .sadly-jawB");
 
-	displayList.mute = displayList_add(".mute");
+	displayList.mute = list$(".mute");
 }
 
 function intro_ready()

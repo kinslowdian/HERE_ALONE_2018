@@ -56,13 +56,13 @@ function hereAlone_init()
 	system.data.html_levels = null;
 	system.resizeTimeout;
 
-	displayList.camera = displayList_add(".camera");
-	displayList.viewer = displayList_add(".camera .viewer");
-	displayList.viewer_bg = displayList_add(".viewer-bg");
-	displayList.fx_ambience = displayList_add(".fx-ambience");
-	displayList.fx_edge = displayList_add(".fx-edge");
+	displayList.camera = list$(".camera");
+	displayList.viewer = list$(".camera .viewer");
+	displayList.viewer_bg = list$(".viewer-bg");
+	displayList.fx_ambience = list$(".fx-ambience");
+	displayList.fx_edge = list$(".fx-edge");
 
-	displayList.linAudio = displayList_add(".lib-audio");
+	displayList.linAudio = list$(".lib-audio");
 
 	levelKit = {};
 	levelKit.unitW = 55;
@@ -77,7 +77,7 @@ function hereAlone_init()
 	intro_init();
 }
 
-function displayList_add(selector)
+function list$(selector)
 {
 	let obj = document.querySelector(selector);
 	return obj;
