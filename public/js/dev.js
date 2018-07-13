@@ -88,6 +88,8 @@ function intro_event(event)
 
 	delay = setTimeout(intro_remove, 3 * 1000);
 
+	control_info_animate_init();
+
 	hack_levelLoad();
 }
 
@@ -98,6 +100,64 @@ function intro_remove()
 	delete displayList.introSadly;
 	delete displayList.introSadlyJawT;
 	delete displayList.introSadlyJawB;
+}
+
+function control_info_animate_init()
+{
+	let delay;
+
+	displayList.controlInfo1 = list$(".ha-controls-icon-1");
+	displayList.controlInfo2 = list$(".ha-controls-icon-2");
+
+	control_info_animateA();
+
+	delay = setTimeout(control_info_animate_remove, 4 * 1000);
+}
+
+function control_info_animate_remove()
+{
+	clearTimeout(system.tempTimer);
+
+	delete system.tempTimer;
+	delete displayList.controlInfo1;
+	delete displayList.controlInfo2;
+}
+
+function control_info_animateA()
+{
+	system.tempTimer = setTimeout(control_info_animateB, 600);
+}
+
+// C1 OFF AND DELAY FOR C2 ON
+function control_info_animateB()
+{
+	displayList.controlInfo1.style.opacity = 0;
+
+	system.tempTimer = setTimeout(control_info_animateC, 600);
+}
+
+// C2 ON AND DELAY FOR C2 OFF
+function control_info_animateC()
+{
+	displayList.controlInfo2.style.opacity = 1;
+
+	system.tempTimer = setTimeout(control_info_animateD, 600);
+}
+
+// C2 OFF AND DELAY FOR C1 ON
+function control_info_animateD()
+{
+	displayList.controlInfo2.style.opacity = 0;
+
+	system.tempTimer = setTimeout(control_info_animateE, 600);
+}
+
+// C1 ON AND RESET
+function control_info_animateE()
+{
+	displayList.controlInfo1.style.opacity = 1;
+
+	control_info_animateA();
 }
 
 
