@@ -212,7 +212,16 @@ function intro_soundTest()
 
 	if(promise !== undefined)
 	{
-		promise.then(_ => { soundTest_pass(); }).catch(error => { soundTest_fail(); });
+		// TODO UNCOMMENT FOR SOUND
+		// promise.then(_ => { soundTest_pass(); }).catch(error => { soundTest_fail(); });
+		
+		// TODO REMOVE
+		soundTest_fail();
+	}
+
+	else
+	{
+		soundTest_fail();
 	}	
 }
 

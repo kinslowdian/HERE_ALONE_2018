@@ -306,6 +306,63 @@
 	background-size: 100% 100%;
 }
 
+.ha-controls-sadly
+{
+	width: 220px;
+	height: 500px;
+	position: absolute;
+
+	right: 0.3em; bottom: 0.3em;
+}
+
+.ha-controls-sadly div
+{
+	position: absolute;
+}
+
+.ha-controls-sadly-body
+{
+	width: 220px;
+	height: 340px;
+
+	left: 0; top: 160px;
+}
+
+.ha-controls-sadly-head
+{
+	width: 220px;
+	height: 210px;
+
+	left: 0; top: 0;
+
+	transform-origin: 170px 160px;
+
+	animation: titleSadlyHeadFrames 400ms ease-in-out infinite;
+}
+
+@keyframes titleSadlyHeadFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(-20deg);}
+	100%	{transform: rotate(0deg);}
+}
+
+.gfx-title-sadly-body
+{
+	background-image: url(../img/sadly_title_body.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100% 100%;
+}
+
+.gfx-title-sadly-head
+{
+	background-image: url(../img/sadly_title_head.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100% 100%;
+}
+
 
 /* !!! RESPONSIVE !!! */
 

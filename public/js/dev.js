@@ -90,13 +90,15 @@ function intro_event(event)
 
 	control_info_animate_init();
 
-	hack_levelLoad();
+	// TODO DELAYED
+	// hack_levelLoad();
 }
 
 function intro_remove()
 {
 	displayList.intro.remove();
 
+	delete displayList.intro;
 	delete displayList.introSadly;
 	delete displayList.introSadlyJawT;
 	delete displayList.introSadlyJawB;
@@ -106,39 +108,61 @@ function control_info_animate_init()
 {
 	let delay;
 
+	displayList.controlInfo = list$(".ha-controls");
 	displayList.controlInfo1 = list$(".ha-controls-icon-1");
 	displayList.controlInfo2 = list$(".ha-controls-icon-2");
 
+	system.tempTimer = false;
+	system.controlInfoCount = 0;
 	control_info_animateA();
-
-	delay = setTimeout(control_info_animate_remove, 4 * 1000);
 }
 
 function control_info_animate_remove()
 {
+	displayList.controlInfo.remove();
+
 	clearTimeout(system.tempTimer);
 
 	delete system.tempTimer;
+	delete system.controlInfoCount;
+
+	delete displayList.controlInfo;
 	delete displayList.controlInfo1;
 	delete displayList.controlInfo2;
 }
 
 function control_info_animateA()
 {
+	trace("control_info_animateA();");
+	
 	system.tempTimer = setTimeout(control_info_animateB, 600);
 }
 
 // C1 OFF AND DELAY FOR C2 ON
 function control_info_animateB()
 {
-	displayList.controlInfo1.style.opacity = 0;
+	trace("control_info_animateB();");
+	
+	if(system.controlInfoCount > 3)
+	{
+		hack_levelLoad();
 
-	system.tempTimer = setTimeout(control_info_animateC, 600);
+		control_info_animate_remove();
+	}
+
+	else
+	{
+		displayList.controlInfo1.style.opacity = 0;
+
+		system.tempTimer = setTimeout(control_info_animateC, 600);
+	}
 }
 
 // C2 ON AND DELAY FOR C2 OFF
 function control_info_animateC()
 {
+	trace("control_info_animateC();");
+
 	displayList.controlInfo2.style.opacity = 1;
 
 	system.tempTimer = setTimeout(control_info_animateD, 600);
@@ -147,6 +171,8 @@ function control_info_animateC()
 // C2 OFF AND DELAY FOR C1 ON
 function control_info_animateD()
 {
+	trace("control_info_animateE();");
+
 	displayList.controlInfo2.style.opacity = 0;
 
 	system.tempTimer = setTimeout(control_info_animateE, 600);
@@ -155,6 +181,8 @@ function control_info_animateD()
 // C1 ON AND RESET
 function control_info_animateE()
 {
+	system.controlInfoCount++;
+
 	displayList.controlInfo1.style.opacity = 1;
 
 	control_info_animateA();
