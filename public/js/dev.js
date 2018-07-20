@@ -86,7 +86,8 @@ function intro_event(event)
 	displayList.introSadlyLeg0.classList.add("tween-walk-leg-0");
 	displayList.introSadlyLeg1.classList.add("tween-walk-leg-1");
 
-	delay = setTimeout(intro_remove, 3 * 1000);
+	// delay = setTimeout(intro_remove, 2 * 1000);
+	delay = setTimeout(intro_out, 2 * 1000);
 
 	control_info_animate_init();
 
@@ -94,8 +95,17 @@ function intro_event(event)
 	// hack_levelLoad();
 }
 
-function intro_remove()
+function intro_out()
 {
+	displayList.intro.addEventListener("transitionend", intro_remove, false);
+	// displayList.intro.style.opacity = 0;
+	displayList.intro.classList.add("title-screens-out");
+}
+
+function intro_remove(event)
+{
+	displayList.intro.removeEventListener("transitionend", intro_remove, false);
+
 	displayList.intro.remove();
 
 	delete displayList.intro;
@@ -117,8 +127,17 @@ function control_info_animate_init()
 	control_info_animateA();
 }
 
-function control_info_animate_remove()
+function control_info_animate_out()
 {
+	displayList.controlInfo.addEventListener("transitionend", control_info_animate_remove, false);
+	// displayList.controlInfo.style.opacity = 0;
+	displayList.controlInfo.classList.add("title-screens-out");
+}
+
+function control_info_animate_remove(event)
+{
+	displayList.controlInfo.removeEventListener("transitionend", control_info_animate_remove, false);
+	
 	displayList.controlInfo.remove();
 
 	clearTimeout(system.tempTimer);
@@ -147,7 +166,9 @@ function control_info_animateB()
 	{
 		hack_levelLoad();
 
-		control_info_animate_remove();
+		// control_info_animate_remove();
+		
+		control_info_animate_out();
 	}
 
 	else
