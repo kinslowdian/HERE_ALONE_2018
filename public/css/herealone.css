@@ -23,6 +23,7 @@
 
 	--dayglo: #FE4A49;
 	--offWhite: #F5FFF5;
+	--altWhite: #FEECB9;
 	--constBlack: #082225;
 }
 
@@ -178,7 +179,7 @@ html, body
 	
 	position: absolute;
 	
-	background: var(--constBlack);
+	background: var(--altWhite);
 	
 	user-select: none;
 	-webkit-touch-callout: none;
@@ -209,7 +210,7 @@ html, body
 	
 	position: absolute;
 	
-	background: var(--offWhite);
+	background: var(--constBlack);
 	
 	pointer-events: none;
 }

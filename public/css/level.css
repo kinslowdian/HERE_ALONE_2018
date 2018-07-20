@@ -34,6 +34,8 @@
 	text-align: left;
 	line-height: 1;
 
+	color: var(--offWhite);
+
 	position: relative;
 	margin: 1020px 0 0 30px;
 }
@@ -43,6 +45,8 @@
 	font-size: 0.16em;
 	text-align: left;
 	line-height: 1;
+
+	color: var(--offWhite);
 	
 	position: relative;
 	margin: 0 0 0 30px;
@@ -72,14 +76,14 @@
 	position: absolute;
 	left: 0; bottom: 0;
 
-	background: #F5FFF5;
+	background: var(--constBlack);
 }
 
 .ground-woods-fill
 {
 	width: inherit;
 	height: inherit;
-	background: #F5FFF5;
+	background: var(--constBlack);
 }
 
 .grad-snow-0
