@@ -51,6 +51,31 @@
 	100%	{opacity: 0;}
 }
 
+.gfx-px-BG_rain
+{
+	width: inherit;
+	height: 50%;
+
+	background-image: url(../img/_pixels/BG_rain.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+}
+
+
+.gfx-px-BG_evening
+{
+	width: inherit;
+	height: 50%;
+
+	background-image: url(../img/_pixels/BG_evening.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+}
+
+
+
 .ha-intro
 {
 	width: 100%;
