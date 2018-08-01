@@ -51,6 +51,8 @@
 	100%	{opacity: 0;}
 }
 
+/*REMOVE*/
+
 .gfx-px-BG_rain
 {
 	width: inherit;
@@ -81,7 +83,8 @@
 	width: 100%;
 	height: 100%;
 
-	font-size: 150px;
+	font-size: 120px;
+	color: var(--smurfBlue);
 
 	position: absolute;
 
@@ -98,11 +101,11 @@
 
 	position: relative;
 
-	background: var(--offWhite);
+	background: var(--constBlack);
 
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	/*grid-template-rows: 1fr;*/
 	grid-gap: 0;
 }
 
@@ -110,6 +113,7 @@
 {
 	position: relative;
 	grid-row: 1;
+	grid-column: 1;
 
 	/*background: black;*/
 }
@@ -130,7 +134,8 @@
 .ha-intro-btm
 {
 	position: relative;
-	grid-row: 2;
+	grid-row: 1;
+	grid-column: 2;
 
 	/*background: white;*/
 }
@@ -152,13 +157,13 @@
 
 .ha-title
 {
-	width: 80%;
+	width: 100%;
 	font-size: 0.8em;
-	text-align: center;
+	text-align: left;
 
 	position: relative;
 
-	margin: 0 auto 0.3em auto;
+	margin: 0.1em 0 0 0.1em;
 }
 
 .ha-desc
@@ -239,6 +244,7 @@
 	height: 100%;
 
 	font-size: 150px;
+	color: var(--smurfBlue);
 
 	position: absolute;
 
@@ -408,7 +414,7 @@
 /* MOBILE */
 @media only screen and (min-width: 300px)
 {
-	.ha-intro
+/*	.ha-intro
 	{
 		font-size: 50px;
 	}
@@ -427,13 +433,13 @@
 	.ha-intro-btn p
 	{
 		font-size: 0.4em;
-	}
+	}*/
 }
 
 /* PHABLET */
 @media only screen and (min-width: 600px)
 {
-	.ha-intro
+/*	.ha-intro
 	{
 		font-size: 80px;
 	}
@@ -452,13 +458,38 @@
 	.ha-intro-btn p
 	{
 		font-size: 0.4em;
-	}
+	}*/
 }
 
 /* TABLET */
 @media only screen and (min-width: 900px)
 {
-	.ha-intro
+/*	.ha-intro
+	{
+		font-size: 100px;
+	}
+
+	.ha-title
+	{
+		width: 80%;
+	}
+
+	.ha-desc
+	{
+		width: 40%;
+		font-size: 0.1em;
+	}
+
+	.ha-intro-btn p
+	{
+		font-size: 0.35em;
+	}*/
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px)
+{
+/*	.ha-intro
 	{
 		font-size: 120px;
 	}
@@ -476,39 +507,14 @@
 
 	.ha-intro-btn p
 	{
-		font-size: 0.35em;
-	}
-}
-
-/* DESKTOP */
-@media only screen and (min-width: 1200px)
-{
-	.ha-intro
-	{
-		font-size: 150px;
-	}
-
-	.ha-title
-	{
-		width: 80%;
-	}
-
-	.ha-desc
-	{
-		width: 40%;
-		font-size: 0.1em;
-	}
-
-	.ha-intro-btn p
-	{
 		font-size: 0.3em;
-	}
+	}*/
 }
 
 /*EXTRA*/
 @media only screen and (min-height: 200px)
 {
-	.ha-intro-top
+/*	.ha-intro-top
 	{
 		visibility: hidden;
 
@@ -523,12 +529,12 @@
 	.ha-intro-inner
 	{
 		grid-template-rows: 1fr;
-	}	
+	}	*/
 }
 
 @media only screen and (min-height: 400px)
 {
-	.ha-intro-top
+/*	.ha-intro-top
 	{
 		visibility: visible;
 	
@@ -543,7 +549,7 @@
 	.ha-intro-inner
 	{
 		grid-template-rows: 1fr 1fr;
-	}	
+	}	*/
 }
 
 
