@@ -31,6 +31,15 @@
 	background: url(../img/tree_intro.svg) left top no-repeat;
 }
 
+.gfx-intro-sadly
+{
+	width: 55px;
+	height: 125px;
+	position: absolute;
+
+	background: url(../img/sadly_intro.svg) left top no-repeat;
+}
+
 
 /*REMOVE*/
 
@@ -150,15 +159,15 @@
 	/*background: white;*/
 }
 
-.ha-intro-btm > div
+/*.ha-intro-btm > div
 {
 	position: relative;
 
-	/*outline: 1px solid red;*/
+	outline: 1px solid red;
 	top: 50%;
 	transform: translateY(-50%);
 
-}
+}*/
 
 .interactive
 {
@@ -242,6 +251,7 @@
 	font-size: 0.3em;
 	text-align: center;
 	line-height: 1;
+	color: var(--offWhite);
 
 	/*background: #000;*/
 }
@@ -256,20 +266,34 @@
 	transition: opacity 300ms linear;
 }
 
-
-.intro-woods
+.ha-intro-fx
 {
-	width: 230px;
+	width: inherit;
+	height: inherit;
+
 	position: absolute;
 
-	right: 20px; bottom: 220px;
+	left: 0;
+	top: 0;
+}
+
+
+/*.intro-woods
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	left: 0; right: 0; top: 0; bottom: 0;
+
+	margin: 0;
 }
 
 .intro-woods > div
 {
 	width: inherit;
 	position: relative;
-}
+}*/
 
 
 .mute
