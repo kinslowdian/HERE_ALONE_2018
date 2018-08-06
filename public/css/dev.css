@@ -230,9 +230,8 @@
 
 .ha-intro-btn
 {
-	position: relative;
-
-	margin: 0.2em auto 0 auto;
+	position: absolute;
+	right: 405px; bottom: 250px;
 
 	line-height: 0;
 
@@ -253,7 +252,13 @@
 	line-height: 1;
 	color: var(--offWhite);
 
-	/*background: #000;*/
+	transition: color 250ms ease-in-out;
+
+}
+
+.ha-intro-btn p:hover
+{
+	color: var(--dayglo);
 }
 
 .ha-intro-btn-default
@@ -266,6 +271,39 @@
 	transition: opacity 300ms linear;
 }
 
+.ha-intro-tree0
+{
+	right: 20px;
+	bottom: 300px;
+}
+
+.ha-intro-tree1
+{
+	right: 120px;
+	bottom: 100px;	
+}
+
+.ha-intro-tree2
+{
+	right: 220px;
+	bottom: 200px;	
+}
+
+.ha-intro-sadly
+{
+	right: 330px; 
+	bottom: 200px;
+
+	animation: haIntroSadlyFrames 240ms linear infinite;
+}
+
+@keyframes haIntroSadlyFrames
+{
+	0%		{transform: translateY(0);}
+	50%		{transform: translateY(-20px);}
+	100%	{transform: translateY(0);}
+}
+
 .ha-intro-fx
 {
 	width: inherit;
@@ -275,6 +313,8 @@
 
 	left: 0;
 	top: 0;
+
+	pointer-events: none;
 }
 
 
