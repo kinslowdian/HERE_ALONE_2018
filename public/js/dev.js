@@ -35,13 +35,6 @@ function intro_init()
 	displayList.introBtn = list$(".ha-intro-btn");
 	displayList.introBtnMain = list$(".ha-intro-btn p");
 
-	displayList.introSadly = list$(".ha-intro-top .sadly");
-	displayList.introSadlyBody = list$(".ha-intro-top .sadly-top");
-	displayList.introSadlyLeg0 = list$(".ha-intro-top .sadly-leg0");
-	displayList.introSadlyLeg1 = list$(".ha-intro-top .sadly-leg1");
-	displayList.introSadlyJawT = list$(".ha-intro-top .sadly-jawT");
-	displayList.introSadlyJawB = list$(".ha-intro-top .sadly-jawB");
-
 	displayList.mute = list$(".mute");
 }
 
@@ -80,12 +73,6 @@ function intro_event(event)
 
 	// intro_remove();	
 
-	displayList.introSadlyJawT.classList.add("setting-jaw-2");
-	displayList.introSadlyJawB.classList.add("setting-jaw-2");
-	displayList.introSadlyBody.classList.add("tween-walk-body");
-	displayList.introSadlyLeg0.classList.add("tween-walk-leg-0");
-	displayList.introSadlyLeg1.classList.add("tween-walk-leg-1");
-
 	// delay = setTimeout(intro_remove, 2 * 1000);
 	delay = setTimeout(intro_out, 2 * 1000);
 
@@ -98,7 +85,6 @@ function intro_event(event)
 function intro_out()
 {
 	displayList.intro.addEventListener("transitionend", intro_remove, false);
-	// displayList.intro.style.opacity = 0;
 	displayList.intro.classList.add("title-screens-out");
 }
 
@@ -109,9 +95,6 @@ function intro_remove(event)
 	displayList.intro.remove();
 
 	delete displayList.intro;
-	delete displayList.introSadly;
-	delete displayList.introSadlyJawT;
-	delete displayList.introSadlyJawB;
 }
 
 function control_info_animate_init()
